@@ -3197,3 +3197,321 @@ p {
 .profile-m-top-r {
   padding: 0 !important;
 }
+
+.calendar-manager {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-manager .the-big-calendar {
+  width: 900px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 7px;
+  background: white;
+}
+
+.calendar-manager .the-big-calendar .top {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 50px 0 50px;
+}
+
+.calendar-manager .the-big-calendar .top .tittle h6 {
+  font-weight: bold;
+}
+
+.calendar-manager .the-big-calendar .top .tools {
+  display: flex;
+}
+
+.calendar-manager .the-big-calendar .top .tools button {
+  margin-left: 10px;
+  background: #57d1ec;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  font-family: montserrat;
+  width: 240px;
+}
+
+.calendar-manager .the-big-calendar .calendar-days {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0 0 0;
+  border-top: solid 1px whitesmoke;
+  padding: 15px 15px;
+}
+
+.calendar-manager .the-big-calendar .calendar-days .the-day h6 {
+  font-weight: bold;
+  font-size: 12px;
+  color: lightgray;
+}
+
+.calendar-manager .the-big-calendar .calendar-days .the-day.current-day h6 {
+  color: black;
+}
+
+.calendar-manager .dayli-events .the-event img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  transition: all .5s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.calendar-manager .dayli-events .the-event img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.calendar-manager .day-squares {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-manager .event {
+  width: 30px;
+  height: 30px;
+  background: #3461b3;
+  border-radius: 100%;
+  vertical-align: middle;
+  border-style: none;
+}
+
+.calendar-manager .the-event {
+  height: 30px;
+}
+
+.calendar-manager .the-square {
+  padding: 27px 0;
+  position: relative;
+  height: 130px;
+  width: 130px;
+  display: flex;
+  /* justify-content: center; */
+  align-items: safe;
+  border: solid 1px #efeeee;
+  transition: all 0.4s;
+}
+
+.calendar-manager .the-square:hover {
+  background: whitesmoke;
+}
+
+.calendar-manager .the-square .date-number h6 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #4a4a4a;
+  position: absolute;
+  top: 10px;
+  left: 8px;
+}
+
+.calendar-manager .the-square .dayli-events {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  align-items: unsafe;
+  height: 30px;
+}
+
+.calendar-manager .the-square.current-day {
+  background: #928aff;
+  border-color: #928aff;
+}
+
+.calendar-manager .the-square.current-day .date-number h6 {
+  color: white;
+}
+
+.calendar-manager {
+  padding: 40px 0 100px 0;
+}
+
+.calendar-manager .the-square.current-day:hover {
+  background: #6059b3;
+  border: #6059b3;
+}
+
+.closest-birthday .picture img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.event-page .closest-events {
+  padding: 30px;
+}
+
+.event-page .closest-events .title {
+  margin: 20px 0;
+}
+
+.event-page .closest-events .closest-birthday {
+  display: flex;
+  margin: 10px 0;
+}
+
+.event-page .closest-events .closest-birthday .info-wrapper {
+  padding-left: 15px;
+}
+
+.event-page .closest-events .closest-birthday .info-wrapper .name h6 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.event-page .closest-events .closest-birthday .info-wrapper .the-reason h6 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 12px;
+  margin-top: -7px;
+}
+
+.picture::before {
+  content: '.';
+  height: 20px;
+  width: 20px;
+  background: #28ffeb;
+  color: white;
+  border-radius: 100%;
+  padding: 0px 9px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  position: absolute;
+  bottom: 0;
+  color: #28ffeb;
+  left: 36px;
+  transition: all 0.4s;
+}
+
+.closest-events.events .picture::before {
+  content: '.';
+  height: 20px;
+  width: 20px;
+  background: #928aff;
+  color: white;
+  border-radius: 100%;
+  padding: 0px 9px;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  position: absolute;
+  bottom: 0;
+  left: 36px;
+  color: #928aff;
+  transition: all 0.4s;
+}
+
+.closest-birthday {
+  position: relative;
+}
+
+.closest-events.events .picture:hover::before, .closest-events .picture:hover::before {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+}
+
+.closest-events.events .picture img, .closest-events .picture img {
+  transition: all 0.4s;
+}
+
+.closest-events.events .picture:hover img, .closest-events .picture:hover img {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.calendar-manager {
+  background: #f6f7f9;
+}
+
+.event-page .current-date h6 {
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  background: #56d1ec;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+.closest-events .tittle {
+  padding: 20px 7px;
+}
+
+@media (max-width: 1024px) {
+  .calendar-manager .the-big-calendar {
+    width: 700px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .calendar-manager .the-square {
+    height: 100px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .calendar-manager .dayli-events .the-event img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (max-width: 800px) {
+  .calendar-manager .the-big-calendar {
+    width: 500px;
+  }
+}
+
+@media (max-width: 800px) {
+  .calendar-manager .the-square {
+    height: 79px;
+    width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-manager .the-big-calendar {
+    width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-manager .the-big-calendar .top {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-manager .the-big-calendar .top .tools button {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-manager .the-square {
+    height: 59px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-manager .dayli-events .the-event img {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-manager .the-square .dayli-events {
+    bottom: 1px;
+  }
+}

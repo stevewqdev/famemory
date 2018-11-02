@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- font awesome - libreria para los iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <!-- FIN font awesome - libreria para los iconos -->
+  <!-- Bootstrap 4 CDN LINKS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!-- FIN Bootstrap 4 CDN LINKS -->
+  <!-- libreria Animate para animaciones con css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- emoji picker libraria-->
+  <title>Famemory</title>
+</head>
+
+<body>
+  <!-- Componente Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light ">
+    <a class="navbar-brand animated fadeInLeft" href="#">
+      <img src="assets/images/logo/logo-text.png" alt="Famemory" title="Famemory" class="logo"> </a>
+    <div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse animated fadeIn" id="search">
+      <form class="form-inline position-relative ml-auto">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control searchbox" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="collapse navbar-collapse mt-2 justify-content-end right-content" id="buttons">
+      <ul class="nav navigation-custom navbar-nav flex-row text-center animated fadeInRight">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">
+            <strong>Inicio</strong>
+          </a>
+        </li>
+        <li class="nav-item dropdown friend-block">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
+          <ul class="dropdown-menu notify-drop">
+            <div class="arrow-up"></div>
+            <div class="notify-drop-title">
+              <div class="row">
+                <div class="notification-wrapper col-md-12  col-sm-12 col-xs-12">
+                  <a class="nav-link" href="#">
+                  </a>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <h6>Solicitudes de amistad <span class="badge badge-primary"> 3</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="single-notification">
+                      <div class="profile">
+                        <img src="assets/images/other/man.jpg" alt="">
+                      </div>
+                      <div class="notification-info">
+                        <div class="col-md-12">
+                          <!-- Notification de solicitud de amistad -->
+                          <div class="notification-content">
+                            <h6 class="user-name">Luke Hunt</h6>
+                            <h6 class="notification-message"><strong>Quiere ser tu amigo</strong></h6>
+                            <!-- Botones de decision de amigos -->
+                            <div class="confirmation-button">
+                              <span class="badge badge-primary" data-choise="aceptar">Aceptar</span>
+                              <span class="badge badge-light" data-choise="rechazar">Rechazar</span>
+                            </div>
+                            <!-- Botones de decision de amigos -->
+                          </div>
+                          <!-- Notification de solicitud de amistad -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="single-notification">
+                      <div class="profile">
+                        <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                      </div>
+                      <div class="notification-info">
+                        <div class="col-md-12">
+                          <div class="notification-content">
+                            <h6 class="user-name">Lena Parker</h6>
+                            <h6 class="notification-message"><strong>Quiere ser tu amigo</strong></h6>
+                            <!-- Botones de decision de amigos -->
+                            <div class="confirmation-button">
+                              <span class="badge badge-primary" data-choise="aceptar">Aceptar</span>
+                              <span class="badge badge-light" data-choise="rechazar">Rechazar</span>
+                            </div>
+                            <!-- Botones de decision de amigos -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="single-notification">
+                      <div class="profile">
+                        <img src="assets/images/other/ff.jpg" alt="">
+                      </div>
+                      <div class="notification-info">
+                        <div class="col-md-12">
+                          <div class="notification-content">
+                            <h6 class="user-name">Donald Parker</h6>
+                            <h6 class="notification-message"><strong>Quiere ser tu amigo</strong></h6>
+                            <!-- Botones de decision de amigos -->
+                            <div class="confirmation-button">
+                              <span class="badge badge-primary" data-choise="aceptar">Aceptar</span>
+                              <span class="badge badge-light" data-choise="rechazar">Rechazar</span>
+                            </div>
+                            <!-- Botones de decision de amigos -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <div class="notify-drop-footer text-center">
+              <a href="#"></i>Ver todas</a>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item dropdown message-block">
+          <a href="#" class="badge badge-danger">6</a>
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-comment"></i></a>
+          <ul class="dropdown-menu notify-drop">
+            <div class="arrow-up"></div>
+            <div class="notify-drop-title">
+              <div class="row">
+                <div class="notification-wrapper col-md-12  col-sm-12 col-xs-12">
+                  <a class="nav-link" href="#">
+                  </a>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <h6>Recientes <span class="badge badge-primary"> 1 sin leer</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/rrrr.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Matthew Coleman</h6>
+                              <h6 class="notification-message"><strong>Hola Emma como has estado? supiste lo de la
+                                  fiesta?</strong></h6>
+                              <h6 class="new-message"><a href="#" class="badge badge-primary">Nuevo</a></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification multi-user">
+                        <div class="profile multiple-chat">
+                          <img src="assets/images/other/man.jpg" alt="chat-profile-image">
+                          <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="chat-profile-image" class="u2">
+                          <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="chat-profile-image"
+                            class="u3">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Zachary Baker, Nathalie Byrde...</h6>
+                              <h6 class="notification-message"><strong class="message-read">Hola Emma, tienes la tarea
+                                  de
+                                  la uni</strong></h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- esta caja solo aplica para chat mulitples usuarios-->
+                        <div class="multiple-user-chat-counter">
+                          <p>+2</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Sarah Paul</h6>
+                              <h6 class="notification-message"><strong class="message-read">Hola Emma como has estado?
+                                  supiste lo de la
+                                  fiesta?</strong></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Jena Paul</h6>
+                              <h6 class="notification-message"><strong class="message-read">Si, me encantaria ir, nos
+                                  vemos mas tarde?</strong></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+            </div>
+            <div class="notify-drop-footer text-center">
+              <a href="#"></i>Ver todas</a>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item dropdown notification-block">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i></a>
+          <ul class="dropdown-menu notify-drop">
+            <div class="arrow-up"></div>
+            <div class="notify-drop-title">
+              <div class="row">
+                <div class="notification-wrapper col-md-12  col-sm-12 col-xs-12">
+                  <a class="nav-link" href="#">
+                    <img src="assets/images/navbar/profile.png" alt="Usuario" title="Usuario" class="in-window">
+                  </a>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <h6>Notificaciones <span class="badge badge-primary">1 nueva</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/rrrr.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Matthew Coleman</h6>
+                              <h6 class="new-message">Nueva Notificacion</h6>
+                              <h6 class="notification-message"><strong>Matthew publico una foto donde te menciona</strong></h6>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye multimedia -->
+                            <div class="notification-media">
+                              <div class="images">
+                                <img src="assets/images/other/landscape/700.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/asoggetti-1120780-unsplash.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/josh-hild-1120349-unsplash.jpg" alt="notification-pic">
+                              </div>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye multimedia -->
+                          </div>
+                          <div class="new-notification">
+                            <p>3h</p>
+                            <img src="assets/images/icons/bell.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Karoline Phillips</h6>
+                              <h6 class="new-message">Nueva Notificacion</h6>
+                              <h6 class="notification-message"><strong>Karoline comento tu estado</strong></h6>
+                            </div>
+                          </div>
+                          <div class="new-notification">
+                            <p>4h</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/500.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Sarah Williams</h6>
+                              <h6 class="notification-message"><strong>Es ahora tu amiga</strong></h6>
+                            </div>
+                          </div>
+                          <div class="new-notification">
+                            <p>4h</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Sandra Coleman</h6>
+                              <h6 class="new-message">Nueva Notificacion</h6>
+                              <h6 class="notification-message"><strong>Sandra publico una foto donde te menciona</strong></h6>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye contenido multimedia -->
+                            <div class="notification-media">
+                              <div class="images">
+                                <img src="assets/images/other/landscape/700.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/asoggetti-1120780-unsplash.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/josh-hild-1120349-unsplash.jpg" alt="notification-pic">
+                              </div>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye multimedia -->
+                          </div>
+                          <div class="new-notification">
+                            <p>5h</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+            </div>
+            <div class="notify-drop-footer text-center">
+              <a href="#"></i>Ver todas</a>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item  navbar-profile">
+          <a class="nav-link" href="#">
+            <img src="assets/images/navbar/profile.png" alt="Usuario" title="Usuario" class=""> </a>
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Ver Perfil</a>
+              <a class="dropdown-item" href="#">Cerrar sesion</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Componente Navbar -->
+  <div class="album-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-manager event-page">
+          <div class="user-info">
+            <div class="name">
+              Emma Watson
+            </div>
+            <div class="profile-pic">
+              <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
+            </div>
+            <div class="location">
+              New York
+            </div>
+          </div>
+          <div class="closest-events">
+            <div class="current-date">
+              <h6>08 de Enero del 2018</h6>
+            </div>
+            <hr>
+            <div class="tittle">
+              <h6><i class="fas fa-birthday-cake"></i> Cumpleanos</h6>
+            </div>
+            <div class="closest-birthday">
+              <div class="picture">
+                <img src="assets/images/navbar/profile.png" alt="">
+              </div>
+              <div class="info-wrapper">
+                <div class="name">
+                  <h6>Bella White</h6>
+                </div>
+                <div class="the-reason">
+                  <h6>Esta de cumpleanos</h6>
+                </div>
+              </div>
+            </div>
+            <div class="closest-birthday">
+              <div class="picture">
+                <img src="assets/images/navbar/profile.png" alt="">
+              </div>
+              <div class="info-wrapper">
+                <div class="name">
+                  <h6>Bella White</h6>
+                </div>
+                <div class="the-reason">
+                  <h6>Esta de cumpleanos</h6>
+                </div>
+              </div>
+            </div>
+            <div class="closest-birthday">
+              <div class="picture">
+                <img src="assets/images/navbar/profile.png" alt="">
+              </div>
+              <div class="info-wrapper">
+                <div class="name">
+                  <h6>Bella White</h6>
+                </div>
+                <div class="the-reason">
+                  <h6>Esta de cumpleanos</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <div class="closest-events events">
+            <div class="tittle">
+              <h6><i class="far fa-bell"></i> Eventos</h6>
+            </div>
+            <div class="closest-birthday">
+              <div class="picture">
+                <img src="assets/images/navbar/profile.png" alt="">
+              </div>
+              <div class="info-wrapper">
+                <div class="name">
+                  <h6>Evento</h6>
+                </div>
+                <div class="the-reason">
+                  <h6>Dia del perro</h6>
+                </div>
+              </div>
+            </div>
+            <div class="closest-birthday">
+              <div class="picture">
+                <img src="assets/images/navbar/profile.png" alt="">
+              </div>
+              <div class="info-wrapper">
+                <div class="name">
+                  <h6>Evento</h6>
+                </div>
+                <div class="the-reason">
+                  <h6>Asistir a la conferencia</h6>
+                </div>
+              </div>
+            </div>
+            <div class="closest-birthday">
+              <div class="picture">
+                <img src="assets/images/navbar/profile.png" alt="">
+              </div>
+              <div class="info-wrapper">
+                <div class="name">
+                  <h6>Evento</h6>
+                </div>
+                <div class="the-reason">
+                  <h6>Como hacer websites</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-9 col-lg-10 col-xl-10 calendar-manager">
+          <div class="the-big-calendar">
+            <div class="top">
+              <div class="tittle">
+                <h6>Calendario</h6>
+              </div>
+              <div class="tools">
+                <select class="form-control" id="exampleFormControlSelect1">
+                  <option>Enero 2018</option>
+                  <option>Enero 2017</option>
+                  <option>Enero 2016</option>
+                  <option>Enero 2015</option>
+                  <option>Enero 2014</option>
+                </select>
+                <button>Crear Evento</button>
+              </div>
+            </div>
+            <div class="calendar-days">
+              <div class="the-day">
+                <h6>Dom</h6>
+              </div>
+              <div class="the-day">
+                <h6>Lun</h6>
+              </div>
+              <div class="the-day">
+                <h6>Mar</h6>
+              </div>
+              <div class="the-day">
+                <h6>Mie</h6>
+              </div>
+              <div class="the-day">
+                <h6>Jue</h6>
+              </div>
+              <div class="the-day">
+                <h6>Vie</h6>
+              </div>
+              <div class="the-day">
+                <h6>Sab</h6>
+              </div>
+            </div>
+            <div class="day-squares">
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>01</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>02</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>03</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>04</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>05</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>06</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>07</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+            </div>
+            <div class="day-squares">
+              <div class="the-square current-day">
+                <div class="date-number">
+                  <h6>08</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Evento: El evento de prueba">
+                    <img src="assets/images/logo/CALENDAREVENT.png" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>09</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>10</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>11</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>12</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>13</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>14</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+            </div>
+            <div class="day-squares">
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>15</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Evento: El evento de prueba">
+                    <img src="assets/images/logo/CALENDAREVENT.png" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>16</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>17</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>18</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>19</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>20</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Evento: El evento de prueba">
+                    <img src="assets/images/logo/CALENDAREVENT.png" alt="">
+                  </div>
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>21</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+            </div>
+            <div class="day-squares">
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>22</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>23</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>24</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>25</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>26</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>27</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Evento: El evento de prueba">
+                    <img src="assets/images/logo/CALENDAREVENT.png" alt="">
+                  </div>
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>28</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+            </div>
+            <div class="day-squares">
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>29</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>30</h6>
+                </div>
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="date-number">
+                  <h6>31</h6>
+                </div>
+                <div class="dayli-events">
+                  <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
+                    <img src="assets/images/other/man.jpg" alt="">
+                  </div>
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="dayli-events">
+
+                </div>
+              </div>
+              <div class="the-square">
+                <div class="dayli-events">
+                </div>
+              </div>
+              <div class="the-square">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Componentes del body-->
+
+  <!--Componentes del body-->
+  <!-- Tooltip Tool -->
+  <script src='js/functions.js'></script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+  <!-- End Tooltip Tool -->
+</body>
+
+</html>
