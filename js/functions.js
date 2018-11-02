@@ -3,8 +3,10 @@ document.onscroll = function() {
   if (scroll >= 10) {
     $(".navbar").addClass("fixed-top");
     $(".column-chat").addClass("column-chat-fixed");
+    $(".chat-wrapper-page").css("margin-top", "127px");
   } else {
     $(".navbar").removeClass("fixed-top");
+    $(".chat-wrapper-page").css("margin-top", "0");
   }
 };
 
