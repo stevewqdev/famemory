@@ -2060,7 +2060,7 @@ p {
 .chat-window {
   bottom: 0px;
   position: fixed;
-  /* top: 10px; */
+  /* top: 10px */
   right: 360px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   display: none;
@@ -2244,7 +2244,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* flex: 0 1 0; */
+  /* flex: 0 1 0 */
   width: 80px;
 }
 
@@ -2289,7 +2289,7 @@ p {
 .notification-wrapper-page .notification-content .the-content {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  /* align-items: center */
   flex-direction: column;
   margin-left: 20px;
 }
@@ -2361,11 +2361,11 @@ p {
 
 .chat-left-bar {
   min-height: 100vh;
-  /* overflow: hidden; */
+  /* overflow: hidden */
   padding: 20px;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  /* justify-content: center */
   align-items: center;
 }
 
@@ -2557,7 +2557,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
+  /* align-items: center */
   border-bottom: #dcdad8;
   margin-left: 10px;
 }
@@ -2807,6 +2807,7 @@ p {
   top: 20px;
   font-weight: bold;
   font-size: 10px;
+  color: #c3c3c3;
 }
 
 @media (max-width: 1440px) {
@@ -2833,7 +2834,7 @@ p {
   padding: 0 70px;
 }
 
-.profile-a-l .main-buttons button {
+.profile-a-l .main-buttons button, .profile-a-r .main-buttons button {
   background: #46c8fd;
   border: none;
   padding: 8px 20px;
@@ -3010,7 +3011,7 @@ p {
 }
 
 @media (max-width: 1024px) {
-  .new-post {
+  .profile-a-c .new-post {
     width: 163%;
   }
 }
@@ -3050,4 +3051,149 @@ p {
     width: 100px !important;
     height: 100px !important;
   }
+}
+
+.profile-m-c {
+  background: url(../assets/images/walls/joss-woodhead-1082452-unsplash.jpg);
+  background-size: cover;
+}
+
+.profile-d-top .billboard {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-d-top .billboard .memory {
+  width: 60%;
+  background: #f5f5f5c4;
+  padding: 60px;
+}
+
+.profile-d-top .billboard .memory .the-person {
+  display: flex;
+  align-items: center;
+}
+
+.profile-d-top .billboard .memory .the-person .the-pic img {
+  height: 120px;
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.profile-d-top .billboard .memory .the-person .name h6 {
+  font-weight: bold;
+  padding-left: 20px;
+  font-size: 30px;
+}
+
+.profile-d-top .billboard .memory .the-bio p {
+  padding: 20px 0;
+  font-size: 14px;
+}
+
+.profile-m-top-r .main-profile-picture {
+  position: relative;
+}
+
+.profile-m-top-r .main-profile-picture .main-name {
+  position: absolute;
+  top: 20px;
+  z-index: 1;
+  width: 100%;
+}
+
+.profile-m-top-r .main-profile-picture .main-name h6 {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.profile-a-r .main-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px 30px 0;
+  flex-wrap: wrap;
+}
+
+.profile-a-r .main-buttons button {
+  margin: 5px;
+}
+
+.profile-d-wrapper .timeline-wrapper {
+  padding-top: 50px;
+}
+
+@media (max-width: 1024px) {
+  .profile-m-c {
+    height: 280px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-d-top .billboard .memory .the-person .the-pic img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-d-top .billboard .memory {
+    width: 70%;
+    background: #f5f5f5c4;
+    padding: 20px 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-d-top .billboard .memory .the-person .name h6 {
+    font-weight: bold;
+    padding-left: 20px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-d-top .billboard .memory .the-bio p {
+    padding: 6px 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-m-c {
+    height: 241px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-m-c {
+    height: 341px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-d-top .billboard .memory {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-m-top-r {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-m-top-r .main-profile-picture .main-name h6 {
+    font-size: 20px;
+  }
+}
+
+.profile-m-top-r {
+  padding: 0 !important;
 }
