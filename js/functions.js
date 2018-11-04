@@ -26,16 +26,6 @@ $(document).ready(function() {
   });
 });
 
-// Inicializar los emojis
-$(document).ready(function() {
-  $(".picker").lsxEmojiPicker({
-    twemoji: true,
-    onSelect: function(emoji) {
-      console.log(emoji);
-    }
-  });
-});
-
 // Abrir ventana de chat
 $(document).ready(function() {
   $(".contact").click(function() {
@@ -53,5 +43,36 @@ $(document).ready(function() {
       $(".chat-menu").addClass("d-none");
       $(".chat-body").addClass("d-none");
     }
+  });
+});
+
+$(document).ready(function() {
+  $(".home-chat-off").click(function() {
+    if ($(this).hasClass("chat-off")) {
+      $(this).removeClass("chat-off");
+      $(".contact").removeClass("d-none");
+      $(".contact-logos").addClass("d-none");
+      $(this).text("Desconectarme");
+    } else {
+      $(this).addClass("chat-off");
+      $(".contact").addClass("d-none");
+      $(".contact-logos").removeClass("d-none");
+      $(this).text("Conectarme");
+    }
+  });
+});
+
+$(document).ready(function() {
+  $(".open-language").click(function() {
+    $(".language-selector")
+      .removeClass("animated slideOutDown")
+      .addClass("animated slideInUp")
+      .css("display", "flex");
+  });
+
+  $(".close-language-selector").click(function() {
+    $(".language-selector")
+      .removeClass("animated slideInUp")
+      .addClass("animated slideOutDown");
   });
 });

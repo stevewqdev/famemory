@@ -690,6 +690,7 @@ p {
 .friends-suggest .friend-single {
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .friends-suggest .friend-profile-picture img {
@@ -707,7 +708,7 @@ p {
 }
 
 .friends-suggest .common-friend {
-  font-size: 12px;
+  font-size: 10px;
   color: #a5a5a5;
 }
 
@@ -954,11 +955,18 @@ p {
 }
 
 .chat .contact-wrapper {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 5px;
+  width: 100%;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.chat .contact-wrapper::-webkit-scrollbar {
+  display: none;
 }
 
 .chat h5 {
@@ -966,12 +974,48 @@ p {
   padding-top: 10px;
 }
 
+.home-chat-off {
+  font-weight: bold;
+  color: gray;
+  font-size: 12px;
+}
+
 .chat .contact {
-  border: solid 1px #00c66e;
   border-radius: 100%;
   padding: 3px;
   cursor: pointer;
   margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border: solid 1px #1abb1a;
+  margin-left: 40px;
+}
+
+.chat .contact-logos {
+  border-radius: 100%;
+  padding: 3px;
+  cursor: pointer;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  border: solid 1px gray;
+  margin-left: 40px;
+}
+
+.chat .contact-logos img {
+  height: 60px;
+  width: 60px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.friends-suggest .carousel-control-next, .friends-suggest .carousel-control-prev {
+  background: #f7f1f1;
 }
 
 .chat .contact img {
@@ -1325,6 +1369,12 @@ p {
   padding: 10px 20px;
   border-radius: 5px;
   font-family: montserrat;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  cursor: pointer;
+}
+
+.add-post button:active {
+  background-color: #3499c1;
 }
 
 .open-photo .modal-dialog {
@@ -1490,12 +1540,13 @@ p {
 }
 
 .friend-profile-pic img {
-  width: 70px;
-  height: 70px;
+  width: 100px;
+  height: 100px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 100%;
   margin-top: -22px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .friend-shelve {
@@ -1595,11 +1646,14 @@ p {
 }
 
 .the-friend button {
-  border: solid 1px black;
+  border: solid 1px;
   padding: 5px 20px;
   background: white;
   transition: all 0.5s;
   cursor: pointer;
+  color: #46c8fd;
+  border-color: #46c8fd;
+  border-radius: 3px;
 }
 
 .the-friend button:hover {
@@ -1708,9 +1762,28 @@ p {
   flex-direction: column;
 }
 
+.famemory-custom-calendar .your-photos {
+  padding: 0 100px 100px 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
 .album-content .selected-tittle {
   padding: 30px;
   padding-bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-content .selected-tittle .form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (max-width: 1440px) {
@@ -1978,7 +2051,7 @@ p {
   font-weight: bold;
   font-size: 14px;
   margin: 0;
-  color: #cecece;
+  color: #9e9d9d;
 }
 
 .recover-password .the-form form input {
@@ -2175,7 +2248,7 @@ p {
   position: absolute;
   top: -217px;
   left: 36%;
-  background: #ffffffc7;
+  background: #ffffff52;
   border-radius: 100%;
   height: 100px;
   width: 100px;
@@ -2204,7 +2277,7 @@ p {
 }
 
 .notification-wrapper-page .notifications-shelve .the-pill h6 {
-  background: #dedede;
+  background: #c3c2c2;
   width: 80px;
   padding: 10px;
   border-radius: 10px;
@@ -2238,7 +2311,7 @@ p {
   display: flex;
   justify-content: space-evenly;
   padding: 30px 20px;
-  border-bottom: solid 1px #e8e8e8;
+  border-bottom: solid 1px #d8d8d8;
 }
 
 .notification-wrapper-page .shelve-wrapper .the-notification .notification-time {
@@ -2252,7 +2325,7 @@ p {
 .notification-wrapper-page .shelve-wrapper .the-notification .notification-time h6 {
   font-size: 12px;
   font-weight: bold;
-  color: #d0d0d0;
+  color: #bbbaba;
 }
 
 .notification-wrapper-page .shelve-wrapper .the-notification .notification-type {
@@ -2263,7 +2336,7 @@ p {
 }
 
 .notification-wrapper-page .shelve-wrapper .the-notification .notification-type .fas {
-  color: #b0d2dd;
+  color: #8eadb7;
   font-size: 25px;
 }
 
@@ -2293,6 +2366,7 @@ p {
   /* align-items: center */
   flex-direction: column;
   margin-left: 20px;
+  color: black;
 }
 
 .notification-wrapper-page .notification-content .the-content h6 {
@@ -2309,7 +2383,7 @@ p {
   font-size: 13px;
   margin-top: 5px;
   font-weight: bold;
-  color: #bfbfbf;
+  color: #a9a8a8;
 }
 
 .notification-wrapper-page .notification-content .the-content .user-tag {
@@ -2485,7 +2559,7 @@ p {
 }
 
 .chat-center .friend-message .the-message.owner-message {
-  background: #00d2df;
+  background: #b7eff3;
 }
 
 .chat-center .friend-message .friend-picture {
@@ -2934,6 +3008,8 @@ p {
   flex-wrap: wrap;
   align-items: center;
   margin: 17px 0;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .profile-a-r .biographys-wrapper .picture img {
@@ -2949,12 +3025,24 @@ p {
   margin: 2px;
 }
 
-.profile-a-r .the-biography .relation-id {
+.profile-a-r .the-biography .relation-id.alive {
   position: absolute;
   top: 10px;
   width: 100%;
   left: 0;
-  background: linear-gradient(to right, #ba006f, #d2d2d2);
+  background: #ba006f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.profile-a-r .the-biography .relation-id.dead {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  left: 0;
+  background: gray;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3012,7 +3100,7 @@ p {
 
 @media (max-width: 1024px) {
   .profile-a-c .new-post {
-    width: 163%;
+    width: 100%;
   }
 }
 
@@ -3058,11 +3146,22 @@ p {
   background-size: cover;
 }
 
+.kids-profile .profile-m-c {
+  background: url(../assets/images/kids/rawpixel-463437-unsplash.jpg);
+  background-size: cover;
+}
+
 .profile-d-top .billboard {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.kids-profile .billboard .memory .the-person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-d-top .billboard .memory {
@@ -3539,4 +3638,249 @@ p {
 .profile-top-area .carousel-indicators {
   bottom: unset;
   top: 20px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+  opacity: 0;
+  transition: all ease-in-out 0.4s;
+}
+
+.carousel:hover .carousel-control-next-icon, .carousel:hover .carousel-control-prev-icon {
+  opacity: 1;
+}
+
+.main-screen-wrapper .logos-slogan h4 {
+  font-weight: bold;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.main-screen-wrapper .circle-underline {
+  border-bottom: solid 3px #c1027a;
+  margin-bottom: 26px;
+}
+
+.add-post {
+  display: flex;
+}
+
+.add-post .add-gift {
+  padding-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c2007a;
+  cursor: pointer;
+}
+
+.profile-d-wrapper .picture::before, .profile-a-wrapper .picture::before {
+  content: '.';
+  background: transparent;
+}
+
+.post-a-gift {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-a-gift img {
+  height: 170px;
+  width: 170px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+.profile-d-wrapper .modal-dialog, .profile-a-wrapper .modal-dialog, .home-wrapper .modal-dialog {
+  max-width: 800px;
+  margin-top: 228px;
+}
+
+.profile-d-wrapper .modal-header, .profile-a-wrapper .modal-header, .home-wrapper .modal-header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-d-wrapper .modal, .profile-a-wrapper .modal, .home-wrapper .modal {
+  padding-right: 0px;
+}
+
+@media (max-width: 480px) {
+  .profile-d-wrapper .modal-dialog, .profile-a-wrapper .modal-dialog, .home-wrapper .modal-dialog {
+    margin-top: 131px;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-a-gift img {
+    height: 100px;
+    width: 100px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .profile-a-r .biographys-wrapper .picture img {
+    height: 50px;
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-a-r .biographys-wrapper .picture img {
+    height: 60px;
+    width: 60px;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-a-c {
+    order: 1;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-a-l {
+    order: 3;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-a-c {
+    order: 2;
+  }
+}
+
+@media (max-width: 800px) {
+  .profile-a-r {
+    order: 4;
+  }
+}
+
+.page-footer {
+  background: #f3f3f3;
+  padding-top: 30px;
+}
+
+.language-selector {
+  position: fixed;
+  background: black;
+  width: 100%;
+  height: 100vh;
+  top: 0px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 99999;
+  display: none;
+}
+
+.the-language {
+  color: white;
+  font-family: montserrat;
+  font-size: 30px;
+  padding: 10px 0;
+  transition: all  0.2s;
+  border-bottom: solid 0px white;
+}
+
+.the-language:hover {
+  border-bottom: solid 2px white;
+}
+
+.close-language-selector {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  cursor: pointer;
+}
+
+.close-language-selector {
+  font-weight: bold;
+  color: white;
+}
+
+.menu-kids-wrapper {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-kids-wrapper .kids-wrapper-l, .menu-kids-wrapper .kids-wrapper-r {
+  border: solid 1px #c8d0da;
+  width: 200px;
+}
+
+.menu-kids-wrapper .kids-wrapper-l .the-kid-option h6, .menu-kids-wrapper .kids-wrapper-r .the-kid-option h6 {
+  padding: 10px;
+  border-bottom: solid 1px #c8d0da;
+  text-align: center;
+  font-weight: bold;
+}
+
+.toys-wrapper {
+  width: 200px;
+  height: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 20px;
+  border-radius: 3px;
+}
+
+.the-toy-inner .top {
+  height: 50px;
+  background: url(../assets/images/lego.jpg);
+  background-size: cover;
+}
+
+.the-toy-inner .logo-toy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -19px;
+}
+
+.the-toy-inner .logo-toy img {
+  width: 120px;
+  background: white;
+}
+
+.container-toystore {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 30px;
+}
+
+.toys-wrapper .container-toystore img {
+  height: 50px;
+  width: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.toys {
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.kids-profile .memory.bd {
+  background-image: url(../assets/images/confetti.png);
+  padding: 110px;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.kids-profile .name {
+  background: #c4afe0;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
 }
