@@ -928,9 +928,10 @@
 
                 <div class="add-post">
                   <button>Publicar</button>
-                  <div class="add-gift" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-gift"
+                  <button class="gift" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-gift"
                       data-tippy="Agrega un regalo"></i>
-                  </div>
+                    Agrega un regalo</button>
+
                   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">
                     <div class="modal-dialog" role="document">
@@ -1022,14 +1023,50 @@
                       </div>
                       <div class="box-bottom">
                         <div class="like liked">
-                          <i class="far fa-thumbs-up"></i>
-                          <h6>Me gusta</h6>
-                          <small>+30 likes</small>
+                          <div class="like-box">
+                            <i class="far fa-thumbs-up"></i>
+                            <h6>Me gusta</h6>
+                            <div class="reaction-tools tippy-popper tippy-hide" x-placement="top">
+                              <div class="tippy-tooltips">
+                                <div class="tippy-content">
+                                  <div style="display: flex; flex-direction: row">
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                                      <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" height="20px">
+                                      <small>Me alegra</small>
+                                    </div>
+
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img src="assets/images/reacciones/triste1.png"
+                                        alt="" class="reaction" height="20px">
+                                      <small>Triste</small></div>
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img src="assets/images/reacciones/manitas1.png"
+                                        alt="" class="reaction" height="20px">
+                                      <small>Me encanta</small></div>
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img src="assets/images/reacciones/estrella.png"
+                                        alt="" class="reaction" height="20px">
+                                      <small>Emotivo</small></div>
+
+
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reactions-post d-none">
+                            <div class="the-reaction">
+                              <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                              <img src="assets/images/reacciones/triste1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccioaron asi">
+                              <img src="assets/images/reacciones/manitas1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                            </div>
+                          </div>
                         </div>
                         <div class="comment">
                           <i class="fas fa-comment-dots"></i>
                           <h6>Comentar</h6>
-                          <small>2 comentarios</small>
                         </div>
                         <div class="share">
                           <i class="far fa-paper-plane"></i>
@@ -1146,38 +1183,9 @@
                       <!-- este es el model que se abre al hacer click en ver mas fotos -->
                       <div class="box-bottom">
                         <div class="like">
-                          <div class="like-box" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                          <div class="like-box">
                             <i class="far fa-thumbs-up"></i>
                             <h6>Me gusta</h6>
-                            <div id="" class="reaction-tools tippy-popper" x-placement="top">
-                              <div class="tippy-tooltip">
-                                <div class="tippy-content">
-                                  <div style="display: flex; flex-direction: row">
-                                    <div style="display: flex; flex-direction: column; margin:3px; justify-content: center; align-items: center; cursor: pointer;"
-                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
-                                      <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" height="30px">
-                                      <small>Me alegra</small>
-                                    </div>
-
-                                    <div style="display: flex; flex-direction: column; margin:3px; justify-content: center; align-items: center; cursor: pointer;"
-                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img src="assets/images/reacciones/triste1.png"
-                                        alt="" class="reaction" height="30px">
-                                      <small>Triste</small></div>
-                                    <div style="display: flex; flex-direction: column; margin:3px; justify-content: center; align-items: center; cursor: pointer;"
-                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img src="assets/images/reacciones/manitas1.png"
-                                        alt="" class="reaction" height="30px">
-                                      <small>Me encanta</small></div>
-                                    <div style="display: flex; flex-direction: column; margin:3px; justify-content: center; align-items: center; cursor: pointer;"
-                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img src="assets/images/reacciones/estrella.png"
-                                        alt="" class="reaction" height="30px">
-                                      <small>Emotivo</small></div>
-
-
-
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
                           </div>
                           <div class="reactions-post">
                             <div class="the-reaction">
@@ -1322,8 +1330,18 @@
                       </div>
                       <div class="box-bottom">
                         <div class="like">
-                          <i class="far fa-thumbs-up"></i>
-                          <h6>Me gusta</h6>
+                          <div class="like-box">
+                            <i class="far fa-thumbs-up"></i>
+                            <h6>Me gusta</h6>
+
+                          </div>
+                          <div class="reactions-post">
+                            <div class="the-reaction">
+                              <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                              <img src="assets/images/reacciones/triste1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccioaron asi">
+                              <img src="assets/images/reacciones/manitas1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                            </div>
+                          </div>
                         </div>
                         <div class="comment">
                           <i class="fas fa-comment-dots"></i>
@@ -1345,391 +1363,7 @@
                 </div>
               </div>
             </div>
-            <div class="posts">
-              <div class="the-post">
-                <div class="container">
-                  <div class="row">
-                    <div class="post-box">
-                      <div class="box-top">
-                        <div class="profile-picture">
-                          <img src="assets/images/other/ff.jpg" alt="">
-                        </div>
-                        <div class="profile-name">
-                          <h6>Jessica Parker <span class="name-companion">compartio una</span> <span class="post-type">publicacion</span></h6>
-                          <h6 class="time">7h</h6>
-                        </div>
-                      </div>
-                      <div class="box-content type-single-image">
-                        <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="post-image" data-toggle="modal"
-                          data-target="#post-id-1">
-                      </div>
-                      <div class="modal fade open-photo" id="post-id-1" tabindex="-1" role="dialog" aria-labelledby="see-more"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-body multiple-images">
-                              <div class="current-photo">
-                                <div class="multi-image"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                                    alt="post-image"></div>
-                              </div>
-                              <div class="control-area">
-                                <div class="profile">
-                                  <div class="profile-image">
-                                    <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
-                                  </div>
-                                  <div class="profile-info">
-                                    <h6 class="name">Emma Watson</h6>
-                                    <h6 class="date">Hace 15 minutos</h6>
-                                  </div>
-                                </div>
-                                <div class="interaction-box">
-                                  <div class="like">
-                                    <i class="far fa-heart"></i>
-                                    <h6>Me gusta</h6>
-                                  </div>
-                                  <div class="comment">
-                                    <i class="fas fa-comment-dots"></i>
-                                    <h6>Comentar</h6>
-                                  </div>
-                                  <div class="share">
-                                    <i class="far fa-paper-plane"></i>
-                                    <h6>Compatir</h6>
-                                  </div>
-                                </div>
-                                <div class="add-comment">
-                                  <h6>Escribe un comentario</h6>
-                                  <input type="text" placeholder="...">
-                                </div>
-                                <div class="comment-box">
-                                  <div class="the-comment">
-                                    <div class="profile">
-                                      <div class="profile-image">
-                                        <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
-                                      </div>
-                                      <div class="profile-info">
-                                        <p class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                          elit. Ipsum temporibus corrupti nobis omnis repellat qui sapiente
-                                          perferendis ex voluptatem animi? Ullam quia quam quae vel amet fugiat
-                                          exercitationem repudiandae provident.</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="box-bottom">
-                        <div class="like liked">
-                          <i class="far fa-thumbs-up"></i>
-                          <h6>Me gusta</h6>
-                          <small>+30 likes</small>
-                        </div>
-                        <div class="comment">
-                          <i class="fas fa-comment-dots"></i>
-                          <h6>Comentar</h6>
-                          <small>2 comentarios</small>
-                        </div>
-                        <div class="share">
-                          <i class="far fa-paper-plane"></i>
-                          <h6>Compatir</h6>
-                        </div>
-                      </div>
-                      <div class="comment-box">
-                        <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
-                        <input type="text" placeholder="Escribe tu comentario">
-                        <div class="attachment">
-                        </div>
-                      </div>
-                      <div class="post-comments">
-                        <div class="profile-pic">
-                          <img src="assets/images/walls/m.jpg" alt="">
-                        </div>
-                        <div class="message">
-                          <p>
-                            Hola amigo como has estado?
-                          </p>
-                        </div>
-                      </div>
-                      <div class="post-comments">
-                        <div class="profile-pic">
-                          <img src="assets/images/other/man.jpg" alt="">
-                        </div>
-                        <div class="message">
-                          <p>
-                            Hola amigo como has estado?
-                          </p>
-                        </div>
-                      </div>
-                      <div class="post-comments reply">
-                        <div class="reply-comment">
-                          <div class="profile-pic">
-                            <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
-                          </div>
-                          <div class="message">
-                            <p>
-                              Hola amigo como has estado?
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="post-comments">
-                        <div class="profile-pic">
-                          <img src="assets/images/other/500.jpg" alt="">
-                        </div>
-                        <div class="message">
-                          <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quae sed quasi
-                            dignissimos quia, dolorem, alias expedita rem provident quaerat sapiente enim quas
-                            nesciunt
-                            deserunt. Voluptas necessitatibus quidem numquam quasi!
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="the-post">
-                <div class="container">
-                  <div class="row">
-                    <div class="post-box">
-                      <div class="box-top">
-                        <div class="profile-picture">
-                          <img src="assets/images/other/rrrr.jpg" alt="">
-                        </div>
-                        <div class="profile-name">
-                          <h6>Coca Cola<span class="name-companion">compartio una</span> <span class="post-type">publicacion</span></h6>
-                          <h6 class="time">1h</h6>
-                        </div>
-                      </div>
-                      <div class="box-content type-single-image">
-                        <img src="assets/images/walls/joss-woodhead-1082452-unsplash.jpg" alt="post-image" data-toggle="modal"
-                          data-target="#post-id-2">
-                      </div>
-                      <!-- este es el model que se abre al hacer click en ver mas fotos -->
-                      <div class="modal fade open-photo" id="post-id-2" tabindex="-1" role="dialog" aria-labelledby="see-more"
-                        aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-body multiple-images">
-                              <div class="current-photo">
-                                <div class="multi-image"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                                    alt="post-image"></div>
-                              </div>
-                              <div class="control-area">
-                                <div class="profile">
-                                  <div class="profile-image">
-                                    <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
-                                  </div>
-                                  <div class="profile-info">
-                                    <h6 class="name">Emma Watson</h6>
-                                    <h6 class="date">Hace 15 minutos</h6>
-                                  </div>
-                                </div>
-                                <div class="interaction-box">
-                                  <div class="like">
-                                    <i class="far fa-heart"></i>
-                                    <h6>Me gusta</h6>
-                                  </div>
-                                  <div class="comment">
-                                    <i class="fas fa-comment-dots"></i>
-                                    <h6>Comentar</h6>
-                                  </div>
-                                  <div class="share">
-                                    <i class="far fa-paper-plane"></i>
-                                    <h6>Compatir</h6>
-                                  </div>
-                                </div>
-                                <div class="add-comment">
-                                  <h6>Escribe un comentario</h6>
-                                  <input type="text" placeholder="...">
-                                </div>
-                                <div class="comment-box">
-                                  <div class="the-comment">
-                                    <div class="profile">
-                                      <div class="profile-image">
-                                        <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
-                                      </div>
-                                      <div class="profile-info">
-                                        <p class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing
-                                          elit. Ipsum temporibus corrupti nobis omnis repellat qui sapiente
-                                          perferendis ex voluptatem animi? Ullam quia quam quae vel amet fugiat
-                                          exercitationem repudiandae provident.</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- este es el model que se abre al hacer click en ver mas fotos -->
-                      <div class="box-bottom">
-                        <div class="like">
-                          <i class="far fa-thumbs-up"></i>
-                          <h6>Me gusta</h6>
-                        </div>
-                        <div class="comment">
-                          <i class="fas fa-comment-dots"></i>
-                          <h6>Comentar</h6>
-                        </div>
-                        <div class="share">
-                          <i class="far fa-paper-plane"></i>
-                          <h6>Compatir</h6>
-                        </div>
-                      </div>
-                      <div class="comment-box">
-                        <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
-                        <input type="text" placeholder="Escribe tu comentario">
-                        <div class="attachment">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="the-post">
-                <div class="container">
-                  <div class="row">
-                    <div class="post-box">
-                      <div class="box-top">
-                        <div class="profile-picture">
-                          <img src="assets/images/other/ff.jpg" alt="">
-                        </div>
-                        <div class="profile-name">
-                          <h6>Jessica Parker <span class="name-companion">compartio una</span> <span class="post-type">publicacion</span></h6>
-                          <h6 class="time">7h</h6>
-                        </div>
-                      </div>
-                      <div class="box-content multi-single-image">
-                        <div class="the-comment-wrapper">
-                          <div class="comment">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet facilis veritatis
-                              hic
-                              ex,
-                              amet, eligendi at eius porro quisquam modi obcaecati architecto rerum, iusto
-                              numquam?
-                              Ratione nam iure cumque perspiciatis.</p>
-                          </div>
-                          <div class="address">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <h6>Caracas, Venezuela</h6>
-                          </div>
-                        </div>
-                        <div class="multi-single-image">
-                          <div class="multi-image" data-toggle="modal" data-target="#post-id-3" data-id="p3-1"><img src="assets/images/walls/joss-woodhead-1082452-unsplash.jpg"
-                              alt="post-image"></div>
-                          <div class="multi-image" data-toggle="modal" data-target="#post-id-3" data-id="p3-2"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                              alt="post-image"></div>
-                          <div class="multi-image" data-toggle="modal" data-target="#post-id-3" data-id="p3-3"><img src="assets/images/other/ff.jpg"
-                              alt="post-image"></div>
-                          <div class="multi-image" data-toggle="modal" data-target="#post-id-3" data-id="p3-4"><img src="assets/images/walls/2.jpg"
-                              alt="post-image"></div>
-                          <div class="multi-image" data-toggle="modal" data-target="#post-id-3" data-id="p3-5"><img src="assets/images/walls/1.jpg"
-                              alt="post-image"></div>
-                          <div class="multi-image" data-toggle="modal" data-target="#post-id-3" data-id="p3-6"><img src="assets/images/other/kal-loftus-596317-unsplash.jpg"
-                              alt="post-image"></div>
-                          <div class="multi-image see-more" data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img
-                              src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="post-image"></div>
-                          <!-- este es el model que se abre al hacer click en ver mas fotos -->
-                          <div class="modal fade open-photo" id="post-id-3" tabindex="-1" role="dialog" aria-labelledby="see-more"
-                            aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-body multiple-images">
-                                  <div class="other-photos">
-                                    <div class="multi-image"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                                        alt="post-image"></div>
-                                    <div class="multi-image current"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                                        alt="post-image"></div>
-                                    <div class="multi-image"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                                        alt="post-image"></div>
-                                  </div>
-                                  <div class="current-photo">
-                                    <div class="multi-image"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
-                                        alt="post-image"></div>
-                                  </div>
-                                  <div class="control-area">
-                                    <div class="profile">
-                                      <div class="profile-image">
-                                        <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
-                                      </div>
-                                      <div class="profile-info">
-                                        <h6 class="name">Emma Watson</h6>
-                                        <h6 class="date">Hace 15 minutos</h6>
-                                      </div>
-                                    </div>
-                                    <div class="interaction-box">
-                                      <div class="like">
-                                        <i class="far fa-heart"></i>
-                                        <h6>Me gusta</h6>
-                                      </div>
-                                      <div class="comment">
-                                        <i class="fas fa-comment-dots"></i>
-                                        <h6>Comentar</h6>
-                                      </div>
-                                      <div class="share">
-                                        <i class="far fa-paper-plane"></i>
-                                        <h6>Compatir</h6>
-                                      </div>
-                                    </div>
-                                    <div class="add-comment">
-                                      <h6>Escribe un comentario</h6>
-                                      <input type="text" placeholder="...">
-                                    </div>
-                                    <div class="comment-box">
-                                      <div class="the-comment">
-                                        <div class="profile">
-                                          <div class="profile-image">
-                                            <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
-                                          </div>
-                                          <div class="profile-info">
-                                            <p class="comment">Lorem ipsum dolor sit, amet consectetur
-                                              adipisicing
-                                              elit. Ipsum temporibus corrupti nobis omnis repellat qui sapiente
-                                              perferendis ex voluptatem animi? Ullam quia quam quae vel amet
-                                              fugiat
-                                              exercitationem repudiandae provident.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- este es el model que se abre al hacer click en ver mas fotos -->
-                        </div>
-                      </div>
-                      <div class="box-bottom">
-                        <div class="like">
-                          <i class="far fa-thumbs-up"></i>
-                          <h6>Me gusta</h6>
-                        </div>
-                        <div class="comment">
-                          <i class="fas fa-comment-dots"></i>
-                          <h6>Comentar</h6>
-                        </div>
-                        <div class="share">
-                          <i class="far fa-paper-plane"></i>
-                          <h6>Compatir</h6>
-                        </div>
-                      </div>
-                      <div class="comment-box">
-                        <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
-                        <input type="text" placeholder="Escribe tu comentario">
-                        <div class="attachment">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
           </div>
         </div>
         <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-chat">
@@ -1836,31 +1470,7 @@
 
         </div>
       </div>
-      <div class="chat-window">
-        <div class="top-chat-window">
-          <h6>Emma Watson</h6>
-          <i class="fas fa-window-minimize minimize-chat"></i>
-        </div>
-        <div class="chat-body">
-          <div class="friend-message">
-            <p>Hola como estas?</p>
-          </div>
-          <div class="my-message">
-            <p>Hola!!</p>
-          </div>
-        </div>
-        <div class="chat-menu">
-          <div class="the-form">
-            <form action="">
-              <input type="text" placeholder="Escribe tu mensaje">
-            </form>
-          </div>
-          <div class="icons">
-            <i class="fas fa-paperclip"></i>
-            <i class="far fa-image" style=" margin-left: 10px; "></i>
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
   <!--Componentes del home-->

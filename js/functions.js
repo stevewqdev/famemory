@@ -29,20 +29,82 @@ $(document).ready(function() {
 // Abrir ventana de chat
 $(document).ready(function() {
   $(".contact").click(function() {
-    $(".chat-window").css("display", "block");
+    let chats = $(".chat-window").length + 1;
+    var ChatWindow = `<div class="chat-window window-chat-${chats}">
+    <div class="top-chat-window">
+      <div class="profile-pic">
+        <img src="assets/images/other/ff.jpg" alt="">
+      </div>
+      <div class="info">
+        <h6>Emma Watson</h6>
+        <div class="dropdown">
+          <i class="fas fa-ellipsis-h dropdown" data-toggle="dropdown"></i>
+          <div class="dropdown-menu">
+            <a class="dropdown-item minimize-chat" data-info="${chats}" href="#">Minimizar</a>
+            <a class="dropdown-item close-chat" data-info="${chats}" href="#">Cerrar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="chat-body cb-${chats}">
+      <div class="friend-message">
+        <p>Hola como estas?</p>
+      </div>
+      <div class="my-message">
+        <p>Hola!!</p>
+      </div>
+    </div>
+    <div class="chat-menu cm-${chats}">
+      <div class="the-form">
+        <form action="">
+          <input type="text" placeholder="Escribe tu mensaje">
+        </form>
+      </div>
+      <div class="icons">
+        <i class="fas fa-paperclip"></i>
+        <i class="far fa-image" style=" margin-left: 10px; "></i>
+      </div>
+    </div>
+  </div>`;
+
+    if (chats > 3) {
+      console.log("no puedes abrir mas chats");
+    } else {
+      $(".container-fluid").append(ChatWindow);
+      if (chats == 1) {
+      } else {
+        var chatPosition = $(`.window-chat-${chats}`).css("right");
+        chatPosition = parseInt(chatPosition, 10);
+        var xPosition = chatPosition * chats;
+        console.log(xPosition);
+        var theChat = $(`window-chat-${chats}`);
+      }
+    }
+  });
+});
+
+$(document).ready(function() {
+  $(document).on("click", ".minimize-chat", function() {
+    var correctChat = $(this).data("info");
+    console.log(correctChat);
+    if (
+      $(`.cb-${correctChat}`).hasClass("d-none") &&
+      $(`.cm-${correctChat}`).hasClass("d-none")
+    ) {
+      $(`.cm-${correctChat}`).removeClass("d-none");
+      $(`.cb-${correctChat}`).removeClass("d-none");
+      $(this).text("Minimizar");
+    } else {
+      $(`.cm-${correctChat}`).addClass("d-none");
+      $(`.cb-${correctChat}`).addClass("d-none");
+      $(this).text("Abrir");
+    }
   });
 
-  $(".minimize-chat").click(function() {
-    if (
-      $(".chat-menu").hasClass("d-none") &&
-      $(".chat-body").hasClass("d-none")
-    ) {
-      $(".chat-menu").removeClass("d-none");
-      $(".chat-body").removeClass("d-none");
-    } else {
-      $(".chat-menu").addClass("d-none");
-      $(".chat-body").addClass("d-none");
-    }
+  $(document).on("click", ".close-chat", function() {
+    var correctChat = $(this).data("info");
+    $(`.window-chat-${correctChat}`).remove();
   });
 });
 
@@ -81,10 +143,11 @@ $(document).ready(function() {
     arrow: true,
     arrowType: "round",
     duration: 0,
-    interactive: true
+    interactive: true,
+    multiple: true
   });
 
   tippy(".like-box", {
-    content: document.querySelector(".reaction-tools")
+    content: document.querySelector(".reaction-tools").innerHTML
   });
 });

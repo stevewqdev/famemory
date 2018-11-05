@@ -607,6 +607,8 @@ p {
 
 .column-profile {
   padding-left: 0px !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding-right: 0 !important;
 }
 
 .column-profile .profile-wall {
@@ -1371,6 +1373,16 @@ p {
   font-family: montserrat;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   cursor: pointer;
+  width: 200px;
+  margin: 0 5px;
+}
+
+.add-post button.gift {
+  background: #cc7aa8;
+}
+
+.add-post button.gift:active {
+  background: #96617f;
 }
 
 .add-post button:active {
@@ -2137,11 +2149,10 @@ p {
   /* top: 10px */
   right: 360px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  display: none;
 }
 
 .chat-window .top-chat-window {
-  background: #46e4fd;
+  background: #0eccea;
   color: white;
   padding: 13px;
   width: 260px;
@@ -2164,12 +2175,11 @@ p {
 
 .chat-window .friend-message {
   background: #e8e8e8;
-  border-radius: 9px;
+  border-radius: 9px 9px 9px 0px;
   padding: 8px 20px;
   display: flex;
   align-items: center;
   margin: 10px 0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 .chat-window .friend-message p {
@@ -2179,15 +2189,14 @@ p {
 }
 
 .chat-window .my-message {
-  background: #f2168b;
-  border-radius: 9px;
+  background: #6ac7d6;
   padding: 8px 20px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: 10px 0;
   text-align: right;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 9px 9px 0px 9px;
 }
 
 .chat-window .my-message p {
@@ -2196,6 +2205,42 @@ p {
   font-weight: bold;
   color: white;
   text-align: right;
+}
+
+.chat-window .dropdown {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  font-size: 11px;
+}
+
+.chat-window .info {
+  padding-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat-window .info h6 {
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.top-chat-window {
+  display: flex;
+}
+
+.top-chat-window .profile-pic {
+  display: flex;
+}
+
+.top-chat-window .profile-pic img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 100%;
 }
 
 .chat-window .chat-menu {
@@ -3933,4 +3978,43 @@ p {
   color: #333;
   font-family: montserrat;
   font-weight: bold;
+}
+
+.tippy-hide {
+  display: none;
+}
+
+.tippy-tooltip {
+  position: relative;
+  color: #000000;
+  border-radius: 4px;
+  font-size: .9rem;
+  padding: .3rem .6rem;
+  max-width: 350px;
+  text-align: center;
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  font-family: montserrat;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.tippy-roundarrow {
+  width: 24px;
+  height: 8px;
+  fill: #f9f9f9;
+}
+
+.chat-window .dropdown-menu {
+  left: -146px !important;
+}
+
+.window-chat-3 {
+  right: 895px !important;
+}
+
+.window-chat-2 {
+  right: 628px !important;
 }
