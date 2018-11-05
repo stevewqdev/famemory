@@ -3766,9 +3766,13 @@ p {
   padding-top: 30px;
 }
 
+.open-language {
+  cursor: pointer;
+}
+
 .language-selector {
   position: fixed;
-  background: black;
+  background: #a9245a;
   width: 100%;
   height: 100vh;
   top: 0px;
@@ -3913,4 +3917,20 @@ p {
 
 .modal-open .modal {
   z-index: 9999999 !important;
+}
+
+.message-footer {
+  padding-bottom: 15px;
+}
+
+.page-footer p, .page-footer a, .page-footer a:hover {
+  color: #bfbfbf;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.page-footer span {
+  color: #333;
+  font-family: montserrat;
+  font-weight: bold;
 }
