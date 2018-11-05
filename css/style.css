@@ -4018,3 +4018,22 @@ p {
 .window-chat-2 {
   right: 628px !important;
 }
+
+.main-menu-footer {
+  position: absolute;
+  width: 100%;
+  bottom: 20px;
+  padding-left: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-menu-footer .row {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-family: montserrat;
+}
