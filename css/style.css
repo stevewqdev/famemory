@@ -2879,7 +2879,7 @@ p {
 
 .like small, .comment small, .share small {
   position: absolute;
-  top: 20px;
+  top: 35px;
   font-weight: bold;
   font-size: 10px;
   color: #c3c3c3;
@@ -3876,6 +3876,7 @@ p {
   padding: 110px;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  background-attachment: fixed;
 }
 
 .kids-profile .name {
@@ -3883,4 +3884,33 @@ p {
   padding: 10px;
   color: white;
   border-radius: 8px;
+}
+
+.like {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.like-box {
+  display: flex;
+}
+
+.reactions-post img {
+  height: 21px;
+}
+
+.reactions-tool img {
+  height: 30px !important;
+  cursor: pointer;
+}
+
+.modal-body .like {
+  flex-direction: unset;
+  align-items: unset;
+}
+
+.modal-open .modal {
+  z-index: 9999999 !important;
 }

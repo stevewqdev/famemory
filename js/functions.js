@@ -76,3 +76,15 @@ $(document).ready(function() {
       .addClass("animated slideOutDown");
   });
 });
+$(document).ready(function() {
+  tippy.setDefaults({
+    arrow: true,
+    arrowType: "round",
+    duration: 0,
+    interactive: true
+  });
+
+  tippy(".like-box", {
+    content: document.querySelector(".reaction-tools")
+  });
+});
