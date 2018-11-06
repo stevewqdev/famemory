@@ -849,12 +849,14 @@ p {
   font-family: montserrat;
   font-weight: bold;
   font-size: 13px;
+  left: 14px;
+  position: relative;
 }
 
 .ui-datepicker-year {
   position: absolute;
   top: 20px;
-  left: 30px;
+  left: 20px;
   font-size: 11px;
   font-family: montserrat;
 }
@@ -890,6 +892,7 @@ p {
 
 .small-calendar {
   border-bottom: solid 1px #ececec;
+  position: relative;
 }
 
 .event-birthday {
