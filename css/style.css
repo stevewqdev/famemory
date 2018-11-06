@@ -961,13 +961,13 @@ p {
 
 .chat .contact-wrapper {
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   margin-top: 5px;
   width: 100%;
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  display: flex;
 }
 
 .chat .contact-wrapper::-webkit-scrollbar {
@@ -977,6 +977,7 @@ p {
 .chat h5 {
   font-weight: bold;
   padding-top: 10px;
+  font-size: 15px;
 }
 
 .home-chat-off {
@@ -989,33 +990,36 @@ p {
   border-radius: 100%;
   padding: 3px;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 5px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 70px;
   border: solid 1px #1abb1a;
-  margin-left: 40px;
+  padding: 34px;
+}
+
+.chat-bottom .form-control {
+  border: none !important;
 }
 
 .chat .contact-logos {
   border-radius: 100%;
-  padding: 3px;
+  padding: 4px 25px;
   cursor: pointer;
-  margin: 20px 0;
+  margin: 3px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
+  width: 53px;
   border: solid 1px gray;
-  margin-left: 40px;
 }
 
 .chat .contact-logos img {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 100%;
 }
 
@@ -1035,6 +1039,7 @@ p {
   position: absolute;
   bottom: 83px;
   left: 0px;
+  background: white;
 }
 
 .close-events .confirmation-button {
@@ -1045,7 +1050,27 @@ p {
 }
 
 .chat-bottom input {
-  max-width: 317px !important;
+  max-width: 45% !important;
+}
+
+.chat-icons {
+  padding-left: 12px;
+}
+
+.chat-icons .fas {
+  color: #b0d2dd;
+}
+
+@media (max-width: 1440px) {
+  .chat-bottom input {
+    max-width: 30% !important;
+  }
+}
+
+@media (max-width: 1280px) {
+  .chat-bottom input {
+    max-width: 22% !important;
+  }
 }
 
 @media (max-width: 800px) {

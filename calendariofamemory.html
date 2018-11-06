@@ -440,7 +440,9 @@
   <div class="album-wrapper">
     <div class="container-fluid">
       <div class="row">
+        <!-- Esta es la columna izquierda donde se selecciona el mes-->
         <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-manager famemory-custom-calendar">
+          <!-- Caja de informacion del usuario-->
           <div class="user-info">
             <div class="name">
               Emma Watson
@@ -452,6 +454,7 @@
               New York
             </div>
           </div>
+          <!-- Esta es la seccion donde se selecciona el mes que se desea ver-->
           <div class="admin-manager">
             <div class="add-functions">
             </div>
@@ -471,9 +474,11 @@
             </div>
           </div>
         </div>
+        <!-- Esta es la columna de la central, donde se selecciona el mes y se ven los albumes de cada uno de ellos -->
         <div class="col-sm-12 col-md-9 col-lg-10 col-xl-10 album-content manager-screen famemory-custom-calendar">
           <div class="your-photos">
             <div class="selected-tittle">
+              <!-- Formulario para seleccionar el mes-->
               <div class="form-group">
                 <label for="exampleFormControlSelect1">Selecciona el Año </label>
                 <select class="form-control" id="exampleFormControlSelect1">
@@ -485,9 +490,12 @@
                 </select>
               </div>
             </div>
+            <!-- En esta area se encuentran las fotos-->
             <div class="the-photos">
+              <!-- Cada elemento con clase multi-image es el encargado de envolver cada album de cada dia-->
               <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
                   alt="post-image">
+                <!-- Menu de opciones de cada album-->
                 <div class="dropdown">
                   <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">

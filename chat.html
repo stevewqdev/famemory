@@ -439,8 +439,10 @@
   <div class="chat-wrapper-page">
     <div class="container-fluid">
       <div class="row">
+        <!--Esta es la barra izquierda de la ventana, en esta se encuentra la informacion de perfil y los contactos-->
         <div class="col-md-3 col-lg-2 col-xl-2 chat-left fixed-top">
           <div class="chat-left-bar">
+            <!-- Informacion del dueno de perfil-->
             <div class="owner-profile">
               <div class="name">
                 Emma Watson
@@ -449,9 +451,11 @@
                 <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
               </div>
             </div>
+            <!-- Esta es la estanteria de contactos-->
             <div class="chat-shelve">
               <div class="friends">
                 <a href="">
+                  <!--Cada elemento con clase the-friend es un amigo de los contactos-->
                   <div class="the-friend">
                     <img src="assets/images/other/ff.jpg" alt="" class="friend-chat">
                   </div>
@@ -542,31 +546,41 @@
             </div>
           </div>
         </div>
+        <!-- Esta es la columna central donde se abren las conversaciones-->
         <div class="col-md-6 col-lg-8 col-xl-8 chat-center">
           <div class="chat-area">
+            <!-- En este elemento se listan todos los participantes del chat-->
             <div class="chat-participants">
               <div class="participants-wrapper">
                 <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="chat-participant">
                 <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="chat-participant">
               </div>
             </div>
+            <!-- friend-message es la clase para los mensajes entrantes, los mensajes escritos por la otra persona
+            En este div se encuentra la foto y el mensaje
+            -->
             <div class="friend-message">
               <div class="the-message">
                 <div class="friend-name">
+                  <!-- Mensaje entrante -->
                   <h6>Fernando Da Silva</h6>
                   <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos, delectus explicabo! Consequuntur
                     soluta excepturi veritatis dignissimos quas, voluptatum aut ea aliquid adipisci unde provident
                     repudiandae optio quia reprehenderit vero animi.</p>
                 </div>
               </div>
+              <!-- Foto del mensaje entrante-->
               <div class="friend-picture">
                 <img src="assets/images/other/500.jpg" alt="">
               </div>
+              <!-- Tiempo del mensaje entrante-->
               <div class="message-time">
                 <p>Escrito hace 20 minutos</p>
               </div>
             </div>
+
             <div class="friend-message ">
+              <!-- La clase owner-message es la que le da los colores y la forma del mensaje propio, cuando vayas a crear un mensaje propio mostrado aqui, debes utilizar la clase the-message junto a owner-message-->
               <div class="the-message owner-message">
                 <div class="friend-name">
                   <h6>Fernando Da Silva</h6>
@@ -627,10 +641,13 @@
             </div>
           </div>
         </div>
+        <!-- Columna de la derecha-->
         <div class="col-md-3 col-lg-2 col-xl-2 chat-right fixed-top">
           <div class="chat-right-bar">
+            <!-- Estanteria de los chats, aqui se encuentran todos los chats aviertos-->
             <div class="chats-shelve">
               <a href="">
+                <!-- The chat es el elemento que envuelve cada uno de los chats, en este esta la foto de perfil, el nombre y el mensaje-->
                 <div class="the-chat">
                   <div class="chat-profile-pic">
                     <img src="assets/images/walls/2.jpg" alt="frien-chat">

@@ -439,6 +439,7 @@
   <div class="album-wrapper">
     <div class="container-fluid">
       <div class="row">
+        <!-- COlumna izquierda, aqui esta la info de perfil y los proximos eventos listados-->
         <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-manager event-page">
           <div class="user-info">
             <div class="name">
@@ -451,6 +452,7 @@
               New York
             </div>
           </div>
+          <!-- Cumpleanos recienets -->
           <div class="closest-events">
             <div class="current-date">
               <h6>08 de Enero del 2018</h6>
@@ -459,6 +461,7 @@
             <div class="tittle">
               <h6><i class="fas fa-birthday-cake"></i> Cumpleanos</h6>
             </div>
+            <!-- Cada elemento con closest-birthday lo diferencia del tipo de elemento de los eventos normales-->
             <div class="closest-birthday">
               <div class="picture">
                 <img src="assets/images/navbar/profile.png" alt="">
@@ -500,6 +503,7 @@
             </div>
           </div>
           <hr>
+          <!-- closest-events se le agrega la clase events, en esta no se listan cumpleanos sino cualquier otro tipo de eventos-->
           <div class="closest-events events">
             <div class="tittle">
               <h6><i class="far fa-bell"></i> Eventos</h6>
@@ -545,13 +549,16 @@
             </div>
           </div>
         </div>
+        <!-- Caja central, en esta se encuentra el calendario -->
         <div class="col-sm-12 col-md-9 col-lg-10 col-xl-10 calendar-manager">
           <div class="the-big-calendar">
             <div class="top">
+              <!-- Titulo -->
               <div class="tittle">
                 <h6>Calendario</h6>
               </div>
               <div class="tools">
+                <!--Seleccionador de mes/a'o-->
                 <select class="form-control" id="exampleFormControlSelect1">
                   <option>Enero 2018</option>
                   <option>Enero 2017</option>
@@ -562,7 +569,9 @@
                 <button>Crear Evento</button>
               </div>
             </div>
+            <!-- Este es el elemento que envuelve los dias del calendario-->
             <div class="calendar-days">
+              <!-- Este elemento es el encargado de darle estilos a cada dia del mes-->
               <div class="the-day">
                 <h6>Dom</h6>
               </div>
@@ -585,12 +594,16 @@
                 <h6>Sab</h6>
               </div>
             </div>
+            <!-- Aqui se crean los cuadros de mes-->
             <div class="day-squares">
               <div class="the-square">
                 <div class="date-number">
+                  <!-- Dia del mes-->
                   <h6>01</h6>
                 </div>
+                <!-- Aqui se listan los eventos diarios-->
                 <div class="dayli-events">
+                  <!-- Los eventos-->
                   <div class="the-event" data-tippy="Cumpleanos: Jerry Horton">
                     <img src="assets/images/other/man.jpg" alt="">
                   </div>

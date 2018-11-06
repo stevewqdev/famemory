@@ -438,12 +438,16 @@
   <!-- Componente Navbar -->
   <!--Componentes del home-->
   <div class="profile-d-wrapper ">
+    <!-- Parte superior del perfil -->
     <div class="profile-d-top">
       <div class="container-fluid">
         <div class="row">
+          <!-- Banner grande con recordatorio-->
           <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9 profile-m-c">
             <div class="billboard">
+              <!-- Cuadro de recordatorio-->
               <div class="memory">
+                <!-- Datos -->
                 <div class="the-person">
                   <div class="the-pic">
                     <img src="assets/images/other/500.jpg" alt="">
@@ -462,8 +466,10 @@
               </div>
             </div>
           </div>
+          <!-- Foto de perfil -->
           <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 profile-m-top-r">
             <div class="main-profile-picture">
+              <!-- Foto en el top de la foto de perfil-->
               <div class="main-name">
                 <h6>Emma Watson</h6>
               </div>
@@ -499,13 +505,19 @@
         </div>
       </div>
     </div>
+    <!-- Parte inferior del perfil -->
     <div class="profile-d-bottom">
       <div class="container-fluid">
         <div class="row">
+          <!-- Columna del timeline -- La descripcion del timeline esta en el index -->
           <div class="col-sm-12 col-md-9 col-lg-9 col-xl-9">
+            <!-- El timeline -->
             <div class="timeline-wrapper">
+              <!-- Area del post nuevo -->
               <div class="new-post">
+                <!-- Envoltorio de los bombillos-->
                 <div class="top-bulb-light">
+                  <!-- Cada bombillo tiene la clase Bulb, en este se encuentra un SVG del bombillo que permite manipularlo con CSS y dentro de el cada icono-->
                   <div class="bulb">
 
                     <a href="">
@@ -888,6 +900,7 @@
                     </a>
                   </div>
                 </div>
+                <!-- Area para crear el post nuevo-->
                 <div class="new-post-content">
                   <form action=""></form>
                   <div class="input-area">
@@ -896,13 +909,13 @@
                         data-emojiable="true"></textarea>
                     </p>
                   </div>
-
+                  <!-- Botones para agregar post y dar un regalo-->
                   <div class="add-post">
                     <button>Publicar</button>
                     <button class="gift" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-gift"
                         data-tippy="Agrega un regalo"></i>
                       Agrega un regalo</button>
-
+                    <!-- Este es el modal de dar un regalo-->
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
                       aria-hidden="true">
                       <div class="modal-dialog" role="document">
@@ -926,11 +939,14 @@
                   </form>
                 </div>
               </div>
+              <!-- Area de los post-->
               <div class="posts">
+                <!-- The post es cada caja de post-->
                 <div class="the-post memory-box">
                   <div class="container">
                     <div class="row">
                       <div class="post-box">
+                        <!--type-single-image es la clase de post que contiene una sola imagen-->
                         <div class="box-content type-single-image">
                           <img src="assets/images/walls/rose.jpg" alt="post-image" data-toggle="modal" data-target="#post-id-1">
                         </div>
@@ -993,10 +1009,13 @@
                           </div>
                         </div>
                         <div class="box-bottom">
+                          <!-- La clase like es la encargada de disparar el modal con las reacciones-->
+                          <!-- La clase liked muestra la manito de like en azul como si le dieron un like-->
                           <div class="like liked">
                             <div class="like-box">
                               <i class="far fa-thumbs-up"></i>
                               <h6>Me gusta</h6>
+                              <!-- Esta es la caja de las reacciones, cuando vayas a agregar una reaccion a una pagina solo debes copiar esta caja y en el javascript se encargara de clonarla en todos los items que lo tengna-->
                               <div class="reaction-tools tippy-popper tippy-hide" x-placement="top">
                                 <div class="tippy-tooltips">
                                   <div class="tippy-content">
@@ -1035,21 +1054,25 @@
                               </div>
                             </div>
                           </div>
+                          <!-- boton de comentarios-->
                           <div class="comment">
                             <i class="fas fa-comment-dots"></i>
                             <h6>Comentar</h6>
                           </div>
+                          <!-- boton de compartir -->
                           <div class="share">
                             <i class="far fa-paper-plane"></i>
                             <h6>Compatir</h6>
                           </div>
                         </div>
+                        <!-- Caja de comentarios-->
                         <div class="comment-box">
                           <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
                           <input type="text" placeholder="Escribe tu comentario">
                           <div class="attachment">
                           </div>
                         </div>
+                        <!-- post-comments es cada comentario colocado en el post -->
                         <div class="post-comments">
                           <div class="profile-pic">
                             <img src="assets/images/walls/m.jpg" alt="">
@@ -1060,6 +1083,7 @@
                             </p>
                           </div>
                         </div>
+                        <!-- la clase reply se anade a los comentarios para que se muestren como una respuesta a otro comentario -->
                         <div class="post-comments reply">
                           <div class="reply-comment">
                             <div class="profile-pic">

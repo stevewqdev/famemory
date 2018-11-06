@@ -1,3 +1,4 @@
+// Esta funcion se encarga de hacer fijo la ventana del chat y acomodar todo el body cuando el navbar se vuelve fijo
 document.onscroll = function() {
   var scroll = $(window).scrollTop();
   if (scroll >= 10) {
@@ -10,6 +11,7 @@ document.onscroll = function() {
   }
 };
 
+// Esta funcion es la encargada te agregar el estado de like en los corazones
 $(".fa-heart").click(function() {
   if ($(this).hasClass("clicked")) {
     $(this).removeClass("clicked");
@@ -18,7 +20,7 @@ $(".fa-heart").click(function() {
   }
 });
 
-// Calendario del home
+// En esta funcion se cargar las flechas de anterior y siguiente en el calendario del home
 $(document).ready(function() {
   $(".datepicker").datepicker({
     prevText: '<i class="fa fa-fw fa-angle-left"></i>',
@@ -26,10 +28,12 @@ $(document).ready(function() {
   });
 });
 
-// Abrir ventana de chat
+// Esta funcion genera las ventanas del chat del home
 $(document).ready(function() {
   $(".contact").click(function() {
+    //Contamos la cantidad de ventanas que existen abiertas
     let chats = $(".chat-window").length + 1;
+    // Definimos el contenido de la ventana
     var ChatWindow = `<div class="chat-window window-chat-${chats}">
     <div class="top-chat-window">
       <div class="profile-pic">
@@ -68,9 +72,11 @@ $(document).ready(function() {
     </div>
   </div>`;
 
+    // Revisamos si hay 3 ventanas abiertas, si es asi no permitiremos que se abran mas
     if (chats > 3) {
       console.log("no puedes abrir mas chats");
     } else {
+      //sino entonces procedemos a crear la ventana
       $(".container-fluid").append(ChatWindow);
       if (chats == 1) {
       } else {
@@ -84,10 +90,14 @@ $(document).ready(function() {
   });
 });
 
+// Esta funcion es la encargada de minimizar y volver a abrir el chat
 $(document).ready(function() {
+  // hcemos tracking del boton de minimizar clickeado
   $(document).on("click", ".minimize-chat", function() {
+    // Agarramos la info del boton para saber que ventana de chat corresponde
     var correctChat = $(this).data("info");
     console.log(correctChat);
+    // veriricamos si la ventana de chat seleccionada tiene las clases para esconder y procedemos a esconderlo o agrandarlo dependiendo del caso
     if (
       $(`.cb-${correctChat}`).hasClass("d-none") &&
       $(`.cm-${correctChat}`).hasClass("d-none")
@@ -101,13 +111,14 @@ $(document).ready(function() {
       $(this).text("Abrir");
     }
   });
-
+  // Esta funcion es la encargada de cerrar las ventanas de chat
   $(document).on("click", ".close-chat", function() {
     var correctChat = $(this).data("info");
     $(`.window-chat-${correctChat}`).remove();
   });
 });
 
+// Esta es la funcion encargada de de desconectar el chat y mostrar el chat con los iconos de Famemory
 $(document).ready(function() {
   $(".home-chat-off").click(function() {
     if ($(this).hasClass("chat-off")) {
@@ -124,6 +135,7 @@ $(document).ready(function() {
   });
 });
 
+// Esta es la funcion indicada de abrir la ventana de seleccion de idioma
 $(document).ready(function() {
   $(".open-language").click(function() {
     $(".language-selector")
@@ -138,6 +150,8 @@ $(document).ready(function() {
       .addClass("animated slideOutDown");
   });
 });
+
+// Esta funcion es la encargada de crear el tooltip para las reacciones
 $(document).ready(function() {
   tippy.setDefaults({
     arrow: true,

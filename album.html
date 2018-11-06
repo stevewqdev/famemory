@@ -439,18 +439,27 @@
   <div class="album-wrapper">
     <div class="container-fluid">
       <div class="row">
+        <!-- Columna izquierda // Contenido del usuario y el manejo de los albumes -->
         <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-manager">
+          <!-- informacion del usuario-->
           <div class="user-info">
+            <!-- Nombre del usuario-->
             <div class="name">
               Emma Watson
             </div>
+            <!--FIN Nombre del usuario-->
+            <!-- Foto de perfil de usuario-->
             <div class="profile-pic">
               <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
             </div>
+            <!-- FIN Foto de perfil de usuario-->
+            <!-- Direccion de usuario-->
             <div class="location">
               New York
             </div>
           </div>
+          <!-- FIN informacion del usuario-->
+          <!-- Area para el manejo de los albumes-->
           <div class="admin-manager">
             <div class="add-functions">
               <div class="item active">Crear Album</div>
@@ -462,12 +471,17 @@
               <div class="item">Etiquetadas</div>
             </div>
           </div>
+          <!-- FIN de Area para el manejo de los albumes-->
         </div>
+        <!-- Fin Columna izquierda // Contenido del usuario y el manejo de los albumes -->
+        <!-- Columna Cental // Aqui se muestra el contenido de los albumes -->
         <div class="col-sm-12 col-md-9 col-lg-10 col-xl-10 album-content manager-screen">
           <div class="your-photos">
+            <!--Titulo del album-->
             <div class="selected-tittle">
               <h4>Agrega fotos a tu album: Vacaciones</h4>
             </div>
+            <!-- Area donde se muestran las fotos del album seleccionado-->
             <div class="the-photos">
               <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
                   alt="post-image">
@@ -483,35 +497,7 @@
                   </div>
                 </div>
               </div>
-              <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
-                  alt="post-image">
-                <div class="dropdown">
-                  <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
-                  alt="post-image">
-                <div class="dropdown">
-                  <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-ellipsis-v"></i>
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </div>
-              </div>
+              <!-- Cada foto va envuelta en un elemento con clase multi-image y que contiene los datos para abrir el modal box correspondiente -->
               <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
                   alt="post-image">
                 <div class="dropdown">
@@ -638,11 +624,41 @@
                   </div>
                 </div>
               </div>
-              <!-- este es el model que se abre al hacer click en ver mas fotos -->
+              <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
+                  alt="post-image">
+                <div class="dropdown">
+                  <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </div>
+              <div class="multi-image " data-toggle="modal" data-target="#post-id-3" data-id="p3-7"><img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg"
+                  alt="post-image">
+                <div class="dropdown">
+                  <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </div>
+              </div>
+              <!-- Cada foto va envuelta en un elemento con clase multi-image y que contiene los datos para abrir el modal box correspondiente -->
+              <!-- este es el modal que se abre al hacer click en ver mas fotos -->
               <div class="modal fade open-photo" id="post-id-3" tabindex="-1" role="dialog" aria-labelledby="see-more"
                 aria-hidden="true">
                 <div class="modal-dialog" role="document">
                   <div class="modal-content">
+                    <!--- body del modal -->
                     <div class="modal-body multiple-images">
                       <button type="button" class="close close-modal" data-dismiss="modal" aria-label="Close">
                         <i class="fas fa-times"></i>
@@ -660,6 +676,7 @@
                             <h6 class="date">Hace 15 minutos</h6>
                           </div>
                         </div>
+                        <!-- Caja de interacciones -->
                         <div class="interaction-box">
                           <div class="like">
                             <i class="far fa-heart"></i>
@@ -674,6 +691,8 @@
                             <h6>Compatir</h6>
                           </div>
                         </div>
+                        <!-- FIN Caja de interacciones -->
+                        <!-- Caja de Comentarios -->
                         <div class="add-comment">
                           <h6>Escribe un comentario</h6>
                           <input type="text" placeholder="...">
@@ -693,14 +712,17 @@
                             </div>
                           </div>
                         </div>
+                        <!-- FIN de Caja de comentarios -->
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- FIN del modal que se abre al hacer click en ver mas fotos -->
             </div>
           </div>
         </div>
+        <!-- FIN Columna Cental // Aqui se muestra el contenido de los albumes -->
       </div>
     </div>
   </div>
