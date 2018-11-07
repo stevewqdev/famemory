@@ -4080,6 +4080,20 @@ button {
   align-items: center;
 }
 
+@media (max-width: 1024px) {
+  .main-menu-footer {
+    padding-left: 0px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-menu-footer .row {
+    flex-direction: column !important;
+    flex-wrap: wrap;
+  }
+}
+
 .main-menu-footer .row {
   flex-direction: row;
   justify-content: space-between;
