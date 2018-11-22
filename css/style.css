@@ -4102,6 +4102,70 @@ button {
   font-family: montserrat;
 }
 
+.posts {
+  width: 560px;
+}
+
+@media (max-width: 768px) {
+  .posts {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .the-post {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.comment-options {
+  background: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.comment-options .fas {
+  color: #9e9e9e;
+}
+
+.d-comment {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.media-to-load {
+  width: 100%;
+  display: flex;
+  align-content: center;
+  margin: 30px 0;
+  fkex-wrap: wrap;
+}
+
+.element-to-load img {
+  height: 100px;
+  width: 100px;
+  margin: 0 5px;
+}
+
+.element-addmore {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px #d2d2d2;
+  border-style: dashed;
+}
+
+.element-addmore h2 {
+  font-size: 60px;
+  margin: 0;
+  color: lightgray;
+  cursor: pointer;
+}
+
 .main-buttons.kids {
   display: flex;
   flex-direction: column;
