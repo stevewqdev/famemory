@@ -2901,6 +2901,7 @@ p {
   border-radius: 5px;
   margin-left: 10px;
   width: 100%;
+  margin-top: 10px;
 }
 
 .post-box .post-comments .message p {
@@ -4133,6 +4134,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+  left: 10px;
 }
 
 .media-to-load {
@@ -4166,9 +4168,59 @@ button {
   cursor: pointer;
 }
 
+.content-message-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-message-wrapper p {
+  margin: 0;
+  padding-left: 10px;
+  font-size: 13px;
+}
+
+.content-message-wrapper .d-comment {
+  left: 10px !important;
+}
+
+.comment-time {
+  margin-left: 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #d0d0d0;
+}
+
 .main-buttons.kids {
   display: flex;
   flex-direction: column;
+}
+
+.post-box .post-comments.reply .message {
+  display: flex;
+  align-items: center;
+  padding: 2px 13px;
+  border-radius: 5px;
+  margin-left: -13px;
+  width: 100%;
+  margin-top: 0px;
+}
+
+.comment-options {
+  display: flex;
+  margin-top: 5px;
+}
+
+.comment-options p {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.post-box-option .comment-options {
+  position: absolute;
+  right: 20px;
+  top: 0px;
 }
 
 .kids-profile {

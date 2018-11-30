@@ -149,7 +149,7 @@
               </li>
             </div>
             <div class="notify-drop-footer text-center">
-              <a href="#"></i>Ver todas</a>
+              <a href="#">Ver todas</a>
             </div>
           </ul>
         </li>
@@ -1035,6 +1035,19 @@
                 <div class="container">
                   <div class="row">
                     <div class="post-box">
+                      <div class="post-box-option">
+
+                        <div class="dropdown d-comment">
+                            <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Editar Post</a>
+                              <a class="dropdown-item" href="#">Borrar Post</a>
+                            </div>
+                      </div>
+                      </div>
                       <div class="box-top">
                         <div class="profile-picture">
                           <img src="assets/images/other/ff.jpg" alt="">
@@ -1089,6 +1102,19 @@
                 <div class="container">
                   <div class="row">
                     <div class="post-box">
+                        <div class="post-box-option">
+
+                            <div class="dropdown d-comment">
+                                <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Editar Post</a>
+                                  <a class="dropdown-item" href="#">Borrar Post</a>
+                                </div>
+                          </div>
+                          </div>
                       <!--type-single-image es la clase de post que contiene una sola imagen-->
                       <div class="box-content type-single-image">
                         <img src="assets/images/walls/rose.jpg" alt="post-image" data-toggle="modal" data-target="#post-id-1">
@@ -1220,10 +1246,24 @@
                         <div class="profile-pic">
                           <img src="assets/images/walls/m.jpg" alt="">
                         </div>
-                        <div class="message">
-                          <p>
-                            Te extrano abuelo
-                          </p>
+                        <div class="content-message-wrapper">
+                          <div class="user-comment-name">
+                            <p><strong>Laura Cohen</strong><span class="comment-time">Ayer a las 12:40h</span></p>
+
+
+                          </div>
+                          <div class="message">
+                            <p>
+                              Te extrano abuelo
+                            </p>
+                          </div>
+                              <div class="comment-options">
+                                <div class="like liked">
+                                    <p><i class="far fa-thumbs-up"></i> Me gusta</p>
+                                </div>
+
+                                <p><i class="fas fa-reply"></i> Responder</p>
+                              </div>
                         </div>
                             <div class="dropdown d-comment">
                               <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
@@ -1242,10 +1282,24 @@
                           <div class="profile-pic">
                             <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
                           </div>
-                          <div class="message">
-                            <p>
-                              Todos lo extranamos, bonita postal :) seguro le habria encantado
-                            </p>
+                          <div class="content-message-wrapper">
+                              <div class="user-comment-name">
+                                <p><strong>Laura Cohen</strong><span class="comment-time">Ayer a las 12:40h</span></p>
+                                <div class="message">
+                                  <p>
+                                    Todos lo extranamos, bonita postal :) seguro le habria encantado
+                                  </p>
+                                </div>
+                                <div class="comment-options">
+                                    <div class="like liked">
+                                        <p><i class="far fa-thumbs-up"></i> Me gusta</p>
+                                    </div>
+
+                                    <p><i class="fas fa-reply"></i> Responder</p>
+                                  </div>
+
+
+                              </div>
                           </div>
                           <div class="dropdown d-comment">
                               <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
