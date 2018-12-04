@@ -165,3 +165,24 @@ $(document).ready(function() {
     content: document.querySelector(".reaction-tools").innerHTML
   });
 });
+
+// funcion agrega el input para responder comentarios
+$(document).ready(function() {
+  $(".response-creator").click(function() {
+    var responseId = $(this).attr("id");
+
+    var theDiv = Array.from($(`.response-${responseId}`))[0];
+    console.log(theDiv);
+    var customForm = `<form action="" class="response-id">
+    <div class="response-wrapper">
+      <div class="profile-pic">
+          <img src="assets/images/walls/m.jpg" alt="">
+      </div>
+      <div class="content-message-wrapper">
+        <input type="text">
+      </div>
+    </div>
+  </form>`;
+    theDiv.innerHTML = customForm;
+  });
+});
