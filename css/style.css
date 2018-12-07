@@ -8,6 +8,10 @@ p {
   font-family: "Open Sans", sans-serif !important;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .logo {
   height: 50px;
 }
@@ -994,9 +998,9 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
   border: solid 1px #1abb1a;
-  padding: 34px;
+  padding: 34px 4px;
+  height: 20px;
 }
 
 .chat-bottom .form-control {
@@ -1968,6 +1972,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .main-screen-wrapper .row {
@@ -2049,6 +2054,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .recover-password .log-card .top-logo .circle-logo {
@@ -3473,7 +3479,7 @@ button {
   height: 130px;
   width: 130px;
   display: flex;
-  /* justify-content: center; */
+  /* justify-content: center */
   align-items: safe;
   border: solid 1px #efeeee;
   transition: all 0.4s;
@@ -4094,6 +4100,14 @@ button {
   }
 }
 
+@media (max-width: 480px) {
+  .main-menu-footer {
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+  }
+}
+
 .main-menu-footer .row {
   flex-direction: row;
   justify-content: space-between;
@@ -4260,4 +4274,149 @@ button {
   border-radius: 5px;
   border: solid 1px #e3e3e3;
   height: 40px;
+}
+
+.logout-page .log-card {
+  width: 300px;
+  min-width: 300px;
+  margin: 20px;
+}
+
+.manager-screen .account {
+  text-align: center;
+}
+
+.manager-screen .account a {
+  color: #b9b9b9;
+  text-decoration: none;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.publicidad-info {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+}
+
+.model-static-background {
+  background-size: cover !important;
+  background-position: center center !important;
+}
+
+@media (max-width: 480px) {
+  .model-static-background .log-card {
+    background: #ffffff80 !important;
+  }
+}
+
+.model-video-background {
+  background: transparent !important;
+}
+
+@media (max-width: 480px) {
+  .model-video-background .log-card {
+    background: #ffffff80 !important;
+  }
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.advertise-video-complement {
+  color: white;
+  text-align: center;
+}
+
+.advertise-button button {
+  color: white;
+  background: #a073dc;
+  border: none;
+  padding: 10px 30px;
+  min-width: 150px;
+}
+
+@media (max-width: 380px) {
+  .logout-page .log-card {
+    width: 300px;
+    min-width: 300px;
+    margin: 50px -5px;
+  }
+}
+
+.long-logo {
+  width: 100%;
+}
+
+.floating-model-content {
+  position: absolute;
+  left: 20px;
+}
+
+.logout-page.model-multiple-blocks .log-card {
+  margin: 0px;
+}
+
+.model-multiple-blocks {
+  position: relative;
+}
+
+.model-multiple-blocks .the-footer-options {
+  bottom: 10px;
+  position: absolute;
+}
+
+.advertise-block {
+  width: 100%;
+  background-size: cover !important;
+  height: 50vh;
+  background-position: center center !important;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.advertise-block h4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  opacity: 0;
+  transition: all ease-in-out 0.5s;
+}
+
+.advertise-block:hover h4 {
+  opacity: 1;
+}
+
+.block-wrapper {
+  width: 100%;
+  height: 100vh;
+}
+
+.row-1 .col-md-4, .row-2 .col-md-4 {
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .model-multiple-blocks .floating-model-content {
+    position: absolute;
+    left: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .model-multiple-blocks .log-card {
+    background: #ffffff94 !important;
+  }
 }
