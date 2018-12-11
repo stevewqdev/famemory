@@ -4277,6 +4277,7 @@ button {
 }
 
 .logout-page .log-card {
+  background: #ffffff7d;
   width: 300px;
   min-width: 300px;
   margin: 20px;
