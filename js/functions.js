@@ -73,8 +73,13 @@ $(document).ready(function() {
   </div>`;
 
     // Revisamos si hay 3 ventanas abiertas, si es asi no permitiremos que se abran mas
+    if (chats >= 3) {
+      $(".more-chats-windows").css("display", "block");
+    } else {
+      $(".more-chats-windows").css("display", "none");
+    }
     if (chats > 3) {
-      console.log("no puedes abrir mas chats");
+      console.log("CHAT WINDOWS LIMIT REACHED");
     } else {
       //sino entonces procedemos a crear la ventana
       $(".container-fluid").append(ChatWindow);
@@ -115,6 +120,10 @@ $(document).ready(function() {
   $(document).on("click", ".close-chat", function() {
     var correctChat = $(this).data("info");
     $(`.window-chat-${correctChat}`).remove();
+    let chats = $(".chat-window").length + 1;
+    if (chats == 3) {
+      $(".more-chats-windows").css("display", "none");
+    }
   });
 });
 

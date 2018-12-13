@@ -4421,3 +4421,16 @@ button {
     background: #ffffff94 !important;
   }
 }
+
+.more-chats-windows {
+  position: fixed;
+  right: 1188px;
+  bottom: 40px;
+  display: none;
+}
+
+.more-chat-drop button {
+  border: solid 1px #cccccc !important;
+  height: 32px;
+  background: white !important;
+}
