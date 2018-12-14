@@ -2191,6 +2191,7 @@ body {
   padding: 13px;
   width: 260px;
   position: relative;
+  max-width: 260px;
 }
 
 .chat-window .fa-window-minimize {
@@ -2202,43 +2203,43 @@ body {
 .chat-window .chat-body {
   padding: 20px;
   height: 260px;
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
+  max-width: 260px;
+  overflow-y: scroll;
 }
 
 .chat-window .friend-message {
-  background: #e8e8e8;
-  border-radius: 9px 9px 9px 0px;
-  padding: 8px 20px;
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
+  margin: 5px 0 35px 0;
 }
 
 .chat-window .friend-message p {
+  background: #e8e8e8;
+  border-radius: 9px 9px 9px 0px;
+  padding: 8px 10px;
+  align-items: center;
   margin: 0;
   font-size: 12px;
   font-weight: bold;
+  word-wrap: break-word;
 }
 
 .chat-window .my-message {
-  background: #6ac7d6;
-  padding: 8px 20px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin: 10px 0;
-  text-align: right;
-  border-radius: 9px 9px 0px 9px;
+  margin: 5px 0 15px 0;
 }
 
 .chat-window .my-message p {
+  background: #6ac7d6;
+  border-radius: 9px 9px 0px 9px;
+  padding: 8px 10px;
   margin: 0;
   font-size: 12px;
   font-weight: bold;
   color: white;
   text-align: right;
+  word-wrap: break-word;
+}
+
+.friend-message .the-message {
+  width: 100%;
 }
 
 .chat-window .dropdown {
@@ -2246,6 +2247,30 @@ body {
   top: 12px;
   right: 10px;
   font-size: 11px;
+}
+
+.friend-message {
+  display: flex;
+  position: relative;
+}
+
+.friend-chat-pic {
+  margin: 5px 10px 5px 0;
+}
+
+.friend-chat-pic img {
+  width: 20px;
+  height: 20px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 100%;
+}
+
+.friend-chat-date {
+  position: absolute;
+  bottom: -19px;
+  color: gray;
+  font-size: 10px;
 }
 
 .chat-window .info {
