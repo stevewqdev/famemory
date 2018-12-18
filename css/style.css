@@ -2216,7 +2216,7 @@ body {
   border-radius: 9px 9px 9px 0px;
   padding: 8px 10px;
   align-items: center;
-  margin: 0;
+  margin: 10px 0;
   font-size: 12px;
   font-weight: bold;
   word-wrap: break-word;
@@ -2224,6 +2224,26 @@ body {
 
 .chat-window .my-message {
   margin: 5px 0 15px 0;
+  position: relative;
+}
+
+.my-message .friend-chat-date {
+  right: 0px;
+}
+
+.is-writting {
+  text-align: right;
+  margin: 10px 0;
+}
+
+.is-writting small {
+  font-size: 9px;
+  color: gray;
+  position: relative;
+  text-align: right;
+  font-style: italic;
+  bottom: -18px;
+  right: 0px;
 }
 
 .chat-window .my-message p {

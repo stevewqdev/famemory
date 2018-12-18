@@ -63,19 +63,9 @@ $(document).ready(function() {
       </div>
       <div class="my-message">
         <p>Hola!!</p>
-      </div>
-      <div class="friend-message">
-        <div class="friend-chat-pic">
-          <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
-        </div>
-        <div class="the-message">
-          <p>Hola como estas?</p>
-        </div>
         <small class="friend-chat-date">Hace 10 minutos</small>
       </div>
-      <div class="my-message">
-        <p>Hola!!</p>
-      </div><div class="friend-message">
+      <div class="friend-message">
       <div class="friend-chat-pic">
         <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
       </div>
@@ -86,18 +76,11 @@ $(document).ready(function() {
     </div>
     <div class="my-message">
       <p>Hola!!</p>
-    </div><div class="friend-message">
-    <div class="friend-chat-pic">
-      <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
+      <small class="friend-chat-date">Hace 10 minutos</small>
     </div>
-    <div class="the-message">
-      <p>Hola como estas?</p>
+    <div class="is-writting">
+      <p><small>Juan esta escribiendo...</small></p>
     </div>
-    <small class="friend-chat-date">Hace 10 minutos</small>
-  </div>
-  <div class="my-message">
-    <p>Hola!!</p>
-  </div>
     </div>
     <div class="chat-menu cm-${chats}">
       <div class="the-form">
