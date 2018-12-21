@@ -2212,7 +2212,7 @@ body {
 }
 
 .chat-window .friend-message p {
-  background: #e8e8e8;
+  background: #gule8e8e8;
   border-radius: 9px 9px 9px 0px;
   padding: 8px 10px;
   align-items: center;
@@ -2986,6 +2986,7 @@ body {
 
 .post-comments.reply {
   background: #f5f3f3;
+  padding-left: 90px;
 }
 
 .reply-comment .message p {
