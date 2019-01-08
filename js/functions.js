@@ -96,23 +96,46 @@ $(document).ready(function() {
   </div>`;
 
     // Revisamos si hay 3 ventanas abiertas, si es asi no permitiremos que se abran mas
-    if (chats >= 3) {
-      $(".more-chats-windows").css("display", "block");
-    } else {
-      $(".more-chats-windows").css("display", "none");
-    }
-    if (chats > 3) {
-      console.log("CHAT WINDOWS LIMIT REACHED");
-    } else {
-      //sino entonces procedemos a crear la ventana
-      $(".container-fluid").append(ChatWindow);
-      if (chats == 1) {
+    let wSize = $(window).width();
+    if (wSize > 1081) {
+      if (2) {
+        $(".more-chats-windows").css("display", "block");
       } else {
-        var chatPosition = $(`.window-chat-${chats}`).css("right");
-        chatPosition = parseInt(chatPosition, 10);
-        var xPosition = chatPosition * chats;
-        console.log(xPosition);
-        var theChat = $(`window-chat-${chats}`);
+        $(".more-chats-windows").css("display", "none");
+      }
+      if (chats > 3) {
+        console.log("CHAT WINDOWS LIMIT REACHED");
+      } else {
+        //sino entonces procedemos a crear la ventana
+        $(".container-fluid").append(ChatWindow);
+        if (chats == 1) {
+        } else {
+          var chatPosition = $(`.window-chat-${chats}`).css("right");
+          chatPosition = parseInt(chatPosition, 10);
+          var xPosition = chatPosition * chats;
+          console.log(xPosition);
+          var theChat = $(`window-chat-${chats}`);
+        }
+      }
+    } else {
+      if (chats >= 2) {
+        $(".more-chats-windows").css("display", "block");
+      } else {
+        $(".more-chats-windows").css("display", "none");
+      }
+      if (chats > 2) {
+        console.log("CHAT WINDOWS LIMIT REACHED");
+      } else {
+        //sino entonces procedemos a crear la ventana
+        $(".container-fluid").append(ChatWindow);
+        if (chats == 1) {
+        } else {
+          var chatPosition = $(`.window-chat-${chats}`).css("right");
+          chatPosition = parseInt(chatPosition, 10);
+          var xPosition = chatPosition * chats;
+          console.log(xPosition);
+          var theChat = $(`window-chat-${chats}`);
+        }
       }
     }
   });

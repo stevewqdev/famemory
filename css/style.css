@@ -4480,3 +4480,99 @@ button {
   height: 32px;
   background: white !important;
 }
+
+@media (max-width: 4385px) {
+  .chat-window {
+    right: 48rem;
+  }
+}
+
+@media (max-width: 4385px) {
+  .window-chat-2 {
+    right: 65rem !important;
+  }
+}
+
+@media (max-width: 4385px) {
+  .window-chat-3 {
+    right: 82rem !important;
+  }
+}
+
+@media (max-width: 2000px) {
+  .chat-window {
+    right: 21rem;
+  }
+}
+
+@media (max-width: 2000px) {
+  .window-chat-2 {
+    right: 38rem !important;
+  }
+}
+
+@media (max-width: 2000px) {
+  .window-chat-3 {
+    right: 55rem !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .chat-window {
+    right: 15rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .window-chat-2 {
+    right: 32rem !important;
+  }
+}
+
+@media (max-width: 1400px) {
+  .window-chat-3 {
+    right: 49rem !important;
+  }
+}
+
+@media (max-width: 1262px) {
+  .chat-window .top-chat-window {
+    width: 221px;
+  }
+}
+
+@media (max-width: 1262px) {
+  .chat-window {
+    right: 14rem;
+  }
+}
+
+@media (max-width: 1262px) {
+  .window-chat-2 {
+    right: 28rem !important;
+  }
+}
+
+@media (max-width: 1262px) {
+  .window-chat-3 {
+    right: 42rem !important;
+  }
+}
+
+@media (max-width: 1081px) {
+  .chat-window {
+    right: 187px;
+  }
+}
+
+@media (max-width: 1081px) {
+  .window-chat-2 {
+    right: 412px !important;
+  }
+}
+
+@media (max-width: 1081px) {
+  .window-chat-3 {
+    right: 636px !important;
+  }
+}
