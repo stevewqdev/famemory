@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/chat.css">
+  <!-- font awesome - libreria para los iconos -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+    crossorigin="anonymous">
+  <!-- FIN font awesome - libreria para los iconos -->
+  <!-- Bootstrap 4 CDN LINKS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <!-- FIN Bootstrap 4 CDN LINKS -->
+  <!-- libreria Animate para animaciones con css -->
+  <link rel="stylesheet" href="css/animate.css">
+
+  <title>Famemory</title>
+</head>
+
+<body>
+  <!-- Componente Navbar -->
+  <nav class="navbar navbar-expand-md navbar-light ">
+    <a class="navbar-brand animated fadeInLeft" href="#">
+      <img src="assets/images/logo/logo-text.png" alt="Famemory" title="Famemory" class="logo"> </a>
+    <div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#buttons" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+    <div class="navbar-collapse animated fadeIn" id="search">
+      <form class="form-inline position-relative ml-auto">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1"><i class="fas fa-search"></i></span>
+        </div>
+        <input type="text" class="form-control searchbox" placeholder="Buscar" aria-label="Username" aria-describedby="basic-addon1" >
+      </form>
+    </div>
+    <div class="collapse navbar-collapse mt-2 justify-content-end right-content" id="buttons">
+      <ul class="nav navigation-custom navbar-nav flex-row text-center animated fadeInRight">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">
+            <strong>Inicio</strong>
+          </a>
+        </li>
+        <li class="nav-item dropdown friend-block">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i></a>
+          <ul class="dropdown-menu notify-drop">
+            <div class="arrow-up"></div>
+            <div class="notify-drop-title">
+              <div class="row">
+                <div class="notification-wrapper col-md-12  col-sm-12 col-xs-12">
+                  <a class="nav-link" href="#">
+                  </a>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <h6>Solicitudes de amistad <span class="badge badge-primary"> 3</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="single-notification">
+                      <div class="profile">
+                        <img src="assets/images/other/man.jpg" alt="">
+                      </div>
+                      <div class="notification-info">
+                        <div class="col-md-12">
+                          <!-- Notification de solicitud de amistad -->
+                          <div class="notification-content">
+                            <h6 class="user-name">Luke Hunt</h6>
+                            <h6 class="notification-message"><strong>Quiere ser tu amigo</strong></h6>
+                            <!-- Botones de decision de amigos -->
+                            <div class="confirmation-button">
+                              <span class="badge badge-primary" data-choise="aceptar">Aceptar</span>
+                              <span class="badge badge-light" data-choise="rechazar">Rechazar</span>
+                            </div>
+                            <!-- Botones de decision de amigos -->
+                          </div>
+                          <!-- Notification de solicitud de amistad -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="single-notification">
+                      <div class="profile">
+                        <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                      </div>
+                      <div class="notification-info">
+                        <div class="col-md-12">
+                          <div class="notification-content">
+                            <h6 class="user-name">Lena Parker</h6>
+                            <h6 class="notification-message"><strong>Quiere ser tu amigo</strong></h6>
+                            <!-- Botones de decision de amigos -->
+                            <div class="confirmation-button">
+                              <span class="badge badge-primary" data-choise="aceptar">Aceptar</span>
+                              <span class="badge badge-light" data-choise="rechazar">Rechazar</span>
+                            </div>
+                            <!-- Botones de decision de amigos -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="container">
+                  <div class="row">
+                    <div class="single-notification">
+                      <div class="profile">
+                        <img src="assets/images/other/ff.jpg" alt="">
+                      </div>
+                      <div class="notification-info">
+                        <div class="col-md-12">
+                          <div class="notification-content">
+                            <h6 class="user-name">Donald Parker</h6>
+                            <h6 class="notification-message"><strong>Quiere ser tu amigo</strong></h6>
+                            <!-- Botones de decision de amigos -->
+                            <div class="confirmation-button">
+                              <span class="badge badge-primary" data-choise="aceptar">Aceptar</span>
+                              <span class="badge badge-light" data-choise="rechazar">Rechazar</span>
+                            </div>
+                            <!-- Botones de decision de amigos -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </div>
+            <div class="notify-drop-footer text-center">
+              <a href="#">Ver todas</a>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item dropdown message-block">
+          <a href="#" class="badge badge-danger">6</a>
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-comment"></i></a>
+          <ul class="dropdown-menu notify-drop">
+            <div class="arrow-up"></div>
+            <div class="notify-drop-title">
+              <div class="row">
+                <div class="notification-wrapper col-md-12  col-sm-12 col-xs-12">
+                  <a class="nav-link" href="#">
+                  </a>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <h6>Recientes <span class="badge badge-primary"> 1 sin leer</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/rrrr.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Matthew Coleman</h6>
+                              <h6 class="notification-message"><strong>Hola Emma como has estado? supiste lo de la
+                                  fiesta?</strong></h6>
+                              <h6 class="new-message"><a href="#" class="badge badge-primary">Nuevo</a></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification multi-user">
+                        <div class="profile multiple-chat">
+                          <img src="assets/images/other/man.jpg" alt="chat-profile-image">
+                          <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="chat-profile-image" class="u2">
+                          <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="chat-profile-image"
+                            class="u3">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Zachary Baker, Nathalie Byrde...</h6>
+                              <h6 class="notification-message"><strong class="message-read">Hola Emma, tienes la tarea
+                                  de
+                                  la uni</strong></h6>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- esta caja solo aplica para chat mulitples usuarios-->
+                        <div class="multiple-user-chat-counter">
+                          <p>+2</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Sarah Paul</h6>
+                              <h6 class="notification-message"><strong class="message-read">Hola Emma como has estado?
+                                  supiste lo de la
+                                  fiesta?</strong></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Jena Paul</h6>
+                              <h6 class="notification-message"><strong class="message-read">Si, me encantaria ir, nos
+                                  vemos mas tarde?</strong></h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+            </div>
+            <div class="notify-drop-footer text-center">
+              <a href="#"></i>Ver todas</a>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item dropdown notification-block">
+          <a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-bell"></i></a>
+          <ul class="dropdown-menu notify-drop">
+            <div class="arrow-up"></div>
+            <div class="notify-drop-title">
+              <div class="row">
+                <div class="notification-wrapper col-md-12  col-sm-12 col-xs-12">
+                  <a class="nav-link" href="#">
+                    <img src="assets/images/navbar/profile.png" alt="Usuario" title="Usuario" class="in-window">
+                  </a>
+                  <div class="col-md-12  col-sm-12 col-xs-12">
+                    <h6>Notificaciones <span class="badge badge-primary">1 nueva</span></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end notify title -->
+            <!-- notify content -->
+            <div class="drop-content">
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/rrrr.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Matthew Coleman</h6>
+                              <h6 class="new-message">Nueva Notificacion</h6>
+                              <h6 class="notification-message"><strong>Matthew publico una foto donde te menciona</strong></h6>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye multimedia -->
+                            <div class="notification-media">
+                              <div class="images">
+                                <img src="assets/images/other/landscape/700.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/asoggetti-1120780-unsplash.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/josh-hild-1120349-unsplash.jpg" alt="notification-pic">
+                              </div>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye multimedia -->
+                          </div>
+                          <div class="new-notification">
+                            <p>3h</p>
+                            <img src="assets/images/icons/bell.png" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Karoline Phillips</h6>
+                              <h6 class="new-message">Nueva Notificacion</h6>
+                              <h6 class="notification-message"><strong>Karoline comento tu estado</strong></h6>
+                            </div>
+                          </div>
+                          <div class="new-notification">
+                            <p>4h</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/500.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Sarah Williams</h6>
+                              <h6 class="notification-message"><strong>Es ahora tu amiga</strong></h6>
+                            </div>
+                          </div>
+                          <div class="new-notification">
+                            <p>4h</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+              <a href="#">
+                <li>
+                  <div class="container">
+                    <div class="row">
+                      <div class="single-notification">
+                        <div class="profile">
+                          <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                        </div>
+                        <div class="notification-info">
+                          <div class="col-md-12">
+                            <div class="notification-content">
+                              <h6 class="user-name">Sandra Coleman</h6>
+                              <h6 class="new-message">Nueva Notificacion</h6>
+                              <h6 class="notification-message"><strong>Sandra publico una foto donde te menciona</strong></h6>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye contenido multimedia -->
+                            <div class="notification-media">
+                              <div class="images">
+                                <img src="assets/images/other/landscape/700.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/asoggetti-1120780-unsplash.jpg" alt="notification-pic">
+                                <img src="assets/images/other/landscape/josh-hild-1120349-unsplash.jpg" alt="notification-pic">
+                              </div>
+                            </div>
+                            <!-- Esta caja solo aplica si la notificacion incluye multimedia -->
+                          </div>
+                          <div class="new-notification">
+                            <p>5h</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </a>
+            </div>
+            <div class="notify-drop-footer text-center">
+              <a href="#"></i>Ver todas</a>
+            </div>
+          </ul>
+        </li>
+        <li class="nav-item  navbar-profile">
+          <a class="nav-link" href="#">
+            <img src="assets/images/navbar/profile.png" alt="Usuario" title="Usuario" class=""> </a>
+          <div class="dropdown">
+            <button class="btn btn-secondary" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <i class="fas fa-ellipsis-v"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Ver Perfil</a>
+              <a class="dropdown-item" href="#">Cerrar sesion</a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Componente Navbar -->
+  <!--Componentes del home-->
+  <div class="home-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <!--Esta es la columna con los datos del usuario en sesion-->
+        <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-profile">
+          <div class="profile-wall" style="background: url(assets/images/walls/2.jpg)">
+
+          </div>
+          <div class="lateral-profile">
+            <!--info del usuario-->
+            <div class="info">
+              <div class="profile-image">
+                <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+              </div>
+              <div class="profile-information">
+                <!-- Nombre -->
+                <h6>Emma Watson</h6>
+                <!-- Localizacion -->
+                <h6 class="location">New York</h6>
+              </div>
+            </div>
+            <!-- Estadisticas del usuario-->
+            <div class="statistics-info">
+              <div class="post-amount">
+                <h6>Publicaciones</h6>
+                <h6 class="amount">150</h6>
+              </div>
+              <div class="post-amount">
+                <h6>Amigos</h6>
+                <h6 class="amount">456</h6>
+              </div>
+            </div>
+            <!-- Estadisticas del usuario-->
+          </div>
+          <!-- Este es el widget del calendario-->
+          <div class="small-calendar">
+            <div class="calendar">
+              <div class="datepicker">
+                <div class="datepicker-header"></div>
+              </div>
+            </div>
+            <div class="close-events">
+              <div class="event-birthday">
+                <div class="profile-picture">
+                  <img src="assets/images/other/philipe-cavalcante-607582-unsplash.jpg" alt="">
+                </div>
+                <div class="profile-info">
+                  <p>Cumpleanos: <span class="content">Laurence Parker </span></span><span class="date">
+                      02/07/2018</span></p>
+                </div>
+              </div>
+              <div class="event-birthday">
+                <div class="profile-picture event">
+                  <i class="fas fa-calendar"></i>
+                </div>
+                <div class="profile-info">
+                  <p>Evento: <span class="content">Fiesta de Carla </span><span class="date">
+                      17/07/2018</span></p>
+                </div>
+              </div>
+              <div class="event-birthday">
+                <div class="profile-picture event">
+                  <i class="fas fa-calendar"></i>
+                </div>
+                <div class="profile-info">
+                  <p>Evento: <span class="content">Como ser desarrollador web </span></span><span class="date">
+                      24/07/2018</span></p>
+                </div>
+              </div>
+              <div class="confirmation-button">
+                <a><span class="badge badge-light" data-choise="rechazar">Ver el calendario</span></a>
+              </div>
+            </div>
+            <!-- Espacio de publicidad escondido -->
+            <div class="ad-square" style="display:none">
+              <p>Publicidad</p>
+              <img src="assets/images/ads/DASH-TWO-Spotify-Advertising.jpg" alt="">
+            </div>
+            <!-- Espacio de publicidad escondido -->
+          </div>
+          <!-- Este es el widget del calendario-->
+          <!-- Area de sugerencia de amigos -->
+          <div class="friends-suggest">
+            <div class="tittle">
+              <h5>Sugerencia de amistad</h5>
+            </div>
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="friend-single">
+                    <div class="friend-profile-picture">
+                      <img src="assets/images/other/man.jpg" alt="">
+                    </div>
+                    <div class="friend-name">
+                      <h6>Henry Cavil</h6>
+                      <h6 class="common-friend">19 amigos en comun</h6>
+                      <div class="confirmation-button">
+                        <span class="badge badge-light" data-choise="rechazar">Agregar</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="friend-single">
+                    <div class="friend-profile-picture">
+                      <img src="assets/images/other/man.jpg" alt="">
+                    </div>
+                    <div class="friend-name">
+                      <h6>Henry Cavil</h6>
+                      <h6 class="common-friend">19 amigos en comun</h6>
+                      <div class="confirmation-button">
+                        <span class="badge badge-light" data-choise="rechazar">Agregar</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="friend-single">
+                    <div class="friend-profile-picture">
+                      <img src="assets/images/other/man.jpg" alt="">
+                    </div>
+                    <div class="friend-name">
+                      <h6>Henry Cavil</h6>
+                      <h6 class="common-friend">19 amigos en comun</h6>
+                      <div class="confirmation-button">
+                        <span class="badge badge-light" data-choise="rechazar">Agregar</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+
+          </div>
+          <!-- Area de sugerencia de amigos -->
+          <!-- Este es el espacio para la publicidad / AD  -->
+          <div class="ad-square">
+            <p>Publicidad</p>
+            <img src="assets/images/ads/DASH-TWO-Spotify-Advertising.jpg" alt="">
+          </div>
+          <!-- Este es el espacio para la publicidad / AD  -->
+        </div>
+        <!-- Columna Central -->
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8">
+          <!-- El timeline -->
+          <div class="timeline-wrapper">
+            <!-- Area del post nuevo -->
+            <div class="new-post">
+              <!-- Envoltorio de los bombillos-->
+              <div class="top-bulb-light">
+                <!-- Cada bombillo tiene la clase Bulb, en este se encuentra un SVG del bombillo que permite manipularlo con CSS y dentro de el cada icono-->
+                <div class="bulb">
+
+                  <a href="">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" class="bulb-wrapper" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="-703 -46.4 512 829.4" style="enable-background:new -703 -46.4 512 829.4;"
+                      xml:space="preserve">
+                      <style type="text/css">
+                        .st0 {
+                          fill: #FFC843;
+                        }
+
+                        .st1 {
+                          fill: #D49000;
+                        }
+
+                        .st2 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st3 {
+                          opacity: 0.1;
+                          enable-background: new;
+                        }
+
+                        .st4 {
+                          fill: #5C6670;
+                        }
+
+                        .st5 {
+                          fill: #333E48;
+                        }
+
+                        .st6 {
+                          fill: #1E252B;
+                        }
+                      </style>
+                      <path id="SVGCleanerId_0" class="st0" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                  s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      <g>
+                        <path id="SVGCleanerId_0_1_" class="st0 the-bulb" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                    s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      </g>
+                      <g>
+                        <path class="st1" d="M-419.1,430.4c4.6,0,8.2,3.7,8.2,8.2c0,42.7,12.3,61.3,25.3,80.9c12.1,18.2,24.6,37.1,24.6,73.8
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-31.7-10.1-47-21.8-64.7c-13.2-19.8-28.1-42.3-28.1-90
+                                    C-427.4,434.1-423.7,430.4-419.1,430.4z" />
+                        <path class="st1" d="M-476.7,430.4c4.6,0,8.2,3.7,8.2,8.2c0,47.7-14.9,70.2-28.1,90c-11.7,17.7-21.8,32.9-21.8,64.7
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-36.7,12.5-55.5,24.6-73.8c13-19.6,25.3-38.2,25.3-80.9
+                                    C-484.9,434.1-481.2,430.4-476.7,430.4z" />
+                      </g>
+                      <path class="st2" d="M-474.8,555.3c2.5,0,4.9,1.1,6.4,3.1l20.5,25.4l20.5-25.4c1.6-1.9,3.9-3.1,6.4-3.1l0,0c2.5,0,4.9,1.1,6.4,3.1
+                                  l26.9,33.4c2.9,3.5,2.3,8.7-1.3,11.6c-3.5,2.9-8.7,2.3-11.6-1.3l-20.5-25.4l-20.5,25.4c-1.6,1.9-3.9,3.1-6.4,3.1s-4.9-1.1-6.4-3.1
+                                  l-20.5-25.4l-20.5,25.4c-2.9,3.5-8,4.1-11.6,1.3c-3.5-2.9-4.1-8-1.3-11.6l26.9-33.4C-479.6,556.4-477.3,555.3-474.8,555.3z" />
+                      <path class="st3" d="M-382.8,459.4c-3.4-6.7-5.4-13.4-5.4-20.7h-119.5c0,7.3-2,14-5.4,20.7H-382.8z" />
+                      <circle class="st4" cx="-447.9" cy="278.5" r="20.3" />
+                      <path class="st3" d="M-447.9,298.7c11.2,0,20.3-9.1,20.3-20.3c0-0.9-0.1-1.8-0.2-2.6c-6.3-2-13.1-3.1-20.1-3.1s-13.7,1.1-20.1,3.1
+                                  c-0.1,0.9-0.2,1.7-0.2,2.6C-468.2,289.7-459.1,298.7-447.9,298.7z" />
+                      <circle class="st5" cx="-447.9" cy="338.5" r="60" />
+                      <path class="st3" d="M-447.9,398.5c33.1,0,60-26.9,60-60c0-4.4-0.5-8.6-1.4-12.7h-117.3c-0.9,4.1-1.4,8.3-1.4,12.7
+                                  C-507.9,371.6-481,398.5-447.9,398.5z" />
+                      <path class="st4" d="M-533,358.8c0-11.2,9.1-20.3,20.3-20.3h129.6c11.2,0,20.3,9.1,20.3,20.3v63.1c0,11.2-9.1,20.3-20.3,20.3h-129.6
+                                  c-11.2,0-20.3-9.1-20.3-20.3V358.8z" />
+                      <g>
+                        <rect x="-533" y="401.5" class="st5" width="170.2" height="16.5" />
+                        <rect x="-533" y="362.6" class="st5" width="170.2" height="16.5" />
+                      </g>
+                      <rect x="-454.9" y="-182.8" class="st4" width="11" height="443" />
+                      <g>
+                        <polygon class="st5" points="-354.9,612.8 -354.9,606.8 -380.6,606.8 -380.6,612.8 -370.7,612.8 -370.7,713.5 -380.6,713.5
+                                    -380.6,719.5 -354.9,719.5 -354.9,713.5 -364.8,713.5 -364.8,612.8 	" />
+                        <g>
+                          <path class="st6" d="M-536.5,695.2l30.1-68c2.1-4.7,5.9-7.5,11.1-7.5h1.1c5.2,0,8.9,2.8,11,7.5l30.1,68c0.6,1.4,1,2.6,1,3.8
+                                      c0,5.1-4,9.1-9,9.1c-4.4,0-7.4-2.6-9.1-6.5L-476,688h-38l-6,14.2c-1.6,3.7-4.8,5.9-8.8,5.9c-4.9,0-8.8-4-8.8-8.9
+                                      C-537.6,697.9-537.1,696.5-536.5,695.2z M-483,671.2l-12-28.5l-12,28.5H-483z" />
+                          <path class="st6" d="M-443,688.4v-0.2c0-14.4,11-21.1,26.7-21.1c6.7,0,11.5,1.1,16.2,2.7v-1.1c0-7.8-4.8-12.1-14.2-12.1
+                                      c-5.2,0-9.4,0.7-13,1.9c-1.1,0.4-1.9,0.5-2.7,0.5c-4.3,0-7.8-3.3-7.8-7.7c0-3.3,2.1-6.2,5.1-7.3c5.9-2.2,12.3-3.5,21.1-3.5
+                                      c10.2,0,17.7,2.7,22.3,7.4c4.9,4.9,7.2,12.2,7.2,21.1v30.1c0,5.1-4.1,9-9.1,9c-5.4,0-9-3.8-9-7.8v-0.1c-4.6,5.1-10.9,8.4-20,8.4
+                                      C-432.8,708.6-443,701.5-443,688.4z M-400,684.1v-3.3c-3.2-1.5-7.4-2.5-12-2.5c-8,0-13,3.2-13,9.1v0.2c0,5.1,4.2,8,10.2,8
+                                      C-405.9,695.7-400,690.9-400,684.1z" />
+                        </g>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+                <div class="bulb">
+                  <a href="">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" class="bulb-wrapper" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="-703 -46.4 512 829.4" style="enable-background:new -703 -46.4 512 829.4;"
+                      xml:space="preserve">
+                      <style type="text/css">
+                        .st0 {
+                          fill: #FFC843;
+                        }
+
+                        .st1 {
+                          fill: #D49000;
+                        }
+
+                        .st2 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st3 {
+                          opacity: 0.1;
+                          enable-background: new;
+                        }
+
+                        .st4 {
+                          fill: #5C6670;
+                        }
+
+                        .st5 {
+                          fill: #333E48;
+                        }
+                      </style>
+                      <path id="SVGCleanerId_0" class="st0" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                  s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      <g>
+                        <path id="SVGCleanerId_0_1_" class="the-bulb" class="st0" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                    s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      </g>
+                      <g>
+                        <path class="st1" d="M-419.1,430.4c4.6,0,8.2,3.7,8.2,8.2c0,42.7,12.3,61.3,25.3,80.9c12.1,18.2,24.6,37.1,24.6,73.8
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-31.7-10.1-47-21.8-64.7c-13.2-19.8-28.1-42.3-28.1-90
+                                    C-427.4,434.1-423.7,430.4-419.1,430.4z" />
+                        <path class="st1" d="M-476.7,430.4c4.6,0,8.2,3.7,8.2,8.2c0,47.7-14.9,70.2-28.1,90c-11.7,17.7-21.8,32.9-21.8,64.7
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-36.7,12.5-55.5,24.6-73.8c13-19.6,25.3-38.2,25.3-80.9
+                                    C-484.9,434.1-481.2,430.4-476.7,430.4z" />
+                      </g>
+                      <path class="st2" d="M-474.8,555.3c2.5,0,4.9,1.1,6.4,3.1l20.5,25.4l20.5-25.4c1.6-1.9,3.9-3.1,6.4-3.1l0,0c2.5,0,4.9,1.1,6.4,3.1
+                                  l26.9,33.4c2.9,3.5,2.3,8.7-1.3,11.6c-3.5,2.9-8.7,2.3-11.6-1.3l-20.5-25.4l-20.5,25.4c-1.6,1.9-3.9,3.1-6.4,3.1s-4.9-1.1-6.4-3.1
+                                  l-20.5-25.4l-20.5,25.4c-2.9,3.5-8,4.1-11.6,1.3c-3.5-2.9-4.1-8-1.3-11.6l26.9-33.4C-479.6,556.4-477.3,555.3-474.8,555.3z" />
+                      <path class="st3" d="M-382.8,459.4c-3.4-6.7-5.4-13.4-5.4-20.7h-119.5c0,7.3-2,14-5.4,20.7H-382.8z" />
+                      <circle class="st4" cx="-447.9" cy="278.5" r="20.3" />
+                      <path class="st3" d="M-447.9,298.7c11.2,0,20.3-9.1,20.3-20.3c0-0.9-0.1-1.8-0.2-2.6c-6.3-2-13.1-3.1-20.1-3.1s-13.7,1.1-20.1,3.1
+                                  c-0.1,0.9-0.2,1.7-0.2,2.6C-468.2,289.7-459.1,298.7-447.9,298.7z" />
+                      <circle class="st5" cx="-447.9" cy="338.5" r="60" />
+                      <path class="st3" d="M-447.9,398.5c33.1,0,60-26.9,60-60c0-4.4-0.5-8.6-1.4-12.7h-117.3c-0.9,4.1-1.4,8.3-1.4,12.7
+                                  C-507.9,371.6-481,398.5-447.9,398.5z" />
+                      <path class="st4" d="M-533,358.8c0-11.2,9.1-20.3,20.3-20.3h129.6c11.2,0,20.3,9.1,20.3,20.3v63.1c0,11.2-9.1,20.3-20.3,20.3h-129.6
+                                  c-11.2,0-20.3-9.1-20.3-20.3V358.8z" />
+                      <g>
+                        <rect x="-533" y="401.5" class="st5" width="170.2" height="16.5" />
+                        <rect x="-533" y="362.6" class="st5" width="170.2" height="16.5" />
+                      </g>
+                      <rect x="-454.9" y="-182.8" class="st4" width="11" height="443" />
+                      <g>
+                        <path d="M-394.8,635.7h-36.3c-3.3,0-6,2.7-6,6v36.3c0,3.3,2.7,6,6,6h17.4c-0.2,9.5-2.4,17.1-6.6,22.8c-3.3,4.5-8.3,8.3-15,11.2
+                                    c-3.1,1.3-4.4,5-3,8l4.3,9.1c1.4,2.9,4.8,4.2,7.8,2.9c7.9-3.4,14.6-7.7,20-13c6.6-6.4,11.2-13.6,13.6-21.7
+                                    c2.5-8.1,3.7-19.1,3.7-33.1v-28.5C-388.8,638.3-391.5,635.7-394.8,635.7z" />
+                        <path d="M-492.6,737.9c7.8-3.4,14.4-7.7,19.9-13c6.7-6.4,11.3-13.6,13.7-21.6s3.7-19.1,3.7-33.1v-28.5c0-3.3-2.7-6-6-6h-36.3
+                                    c-3.3,0-6,2.7-6,6v36.3c0,3.3,2.7,6,6,6h17.4c-0.2,9.5-2.4,17.1-6.6,22.8c-3.3,4.5-8.3,8.3-15,11.2c-3.1,1.3-4.4,5-3,8l4.3,9.1
+                                    C-499,737.9-495.5,739.2-492.6,737.9z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+                <div class="bulb">
+                  <a href="">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" class="bulb-wrapper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="-703 -46.4 512 829.4" style="enable-background:new -703 -46.4 512 829.4;"
+                      xml:space="preserve">
+                      <style type="text/css">
+                        .st0 {
+                          fill: #FFC843;
+                        }
+
+                        .st1 {
+                          fill: #D49000;
+                        }
+
+                        .st2 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st3 {
+                          opacity: 0.1;
+                          enable-background: new;
+                        }
+
+                        .st4 {
+                          fill: #5C6670;
+                        }
+
+                        .st5 {
+                          fill: #333E48;
+                        }
+                      </style>
+                      <path id="SVGCleanerId_0" class="st0" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                  s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      <g>
+                        <path id="SVGCleanerId_0_1_" class="st0 the-bulb" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                    s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      </g>
+                      <g>
+                        <path class="st1" d="M-419.1,430.4c4.6,0,8.2,3.7,8.2,8.2c0,42.7,12.3,61.3,25.3,80.9c12.1,18.2,24.6,37.1,24.6,73.8
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-31.7-10.1-47-21.8-64.7c-13.2-19.8-28.1-42.3-28.1-90
+                                    C-427.4,434.1-423.7,430.4-419.1,430.4z" />
+                        <path class="st1" d="M-476.7,430.4c4.6,0,8.2,3.7,8.2,8.2c0,47.7-14.9,70.2-28.1,90c-11.7,17.7-21.8,32.9-21.8,64.7
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-36.7,12.5-55.5,24.6-73.8c13-19.6,25.3-38.2,25.3-80.9
+                                    C-484.9,434.1-481.2,430.4-476.7,430.4z" />
+                      </g>
+                      <path class="st2" d="M-474.8,555.3c2.5,0,4.9,1.1,6.4,3.1l20.5,25.4l20.5-25.4c1.6-1.9,3.9-3.1,6.4-3.1l0,0c2.5,0,4.9,1.1,6.4,3.1
+                                  l26.9,33.4c2.9,3.5,2.3,8.7-1.3,11.6c-3.5,2.9-8.7,2.3-11.6-1.3l-20.5-25.4l-20.5,25.4c-1.6,1.9-3.9,3.1-6.4,3.1s-4.9-1.1-6.4-3.1
+                                  l-20.5-25.4l-20.5,25.4c-2.9,3.5-8,4.1-11.6,1.3c-3.5-2.9-4.1-8-1.3-11.6l26.9-33.4C-479.6,556.4-477.3,555.3-474.8,555.3z" />
+                      <path class="st3" d="M-382.8,459.4c-3.4-6.7-5.4-13.4-5.4-20.7h-119.5c0,7.3-2,14-5.4,20.7H-382.8z" />
+                      <circle class="st4" cx="-447.9" cy="278.5" r="20.3" />
+                      <path class="st3" d="M-447.9,298.7c11.2,0,20.3-9.1,20.3-20.3c0-0.9-0.1-1.8-0.2-2.6c-6.3-2-13.1-3.1-20.1-3.1s-13.7,1.1-20.1,3.1
+                                  c-0.1,0.9-0.2,1.7-0.2,2.6C-468.2,289.7-459.1,298.7-447.9,298.7z" />
+                      <circle class="st5" cx="-447.9" cy="338.5" r="60" />
+                      <path class="st3" d="M-447.9,398.5c33.1,0,60-26.9,60-60c0-4.4-0.5-8.6-1.4-12.7h-117.3c-0.9,4.1-1.4,8.3-1.4,12.7
+                                  C-507.9,371.6-481,398.5-447.9,398.5z" />
+                      <path class="st4" d="M-533,358.8c0-11.2,9.1-20.3,20.3-20.3h129.6c11.2,0,20.3,9.1,20.3,20.3v63.1c0,11.2-9.1,20.3-20.3,20.3h-129.6
+                                  c-11.2,0-20.3-9.1-20.3-20.3V358.8z" />
+                      <g>
+                        <rect x="-533" y="401.5" class="st5" width="170.2" height="16.5" />
+                        <rect x="-533" y="362.6" class="st5" width="170.2" height="16.5" />
+                      </g>
+                      <rect x="-454.9" y="-182.8" class="st4" width="11" height="443" />
+                      <g>
+                        <path d="M-451.9,722.3c0,2.1-1.2,3.9-3,4.8c-0.7,0.3-1.5,0.5-2.2,0.5c-1.2,0-2.4-0.4-3.4-1.2l-28.9-23.9h-15.4
+                                    c-2.9,0-5.3-2.4-5.3-5.3V676c0-2.9,2.4-5.3,5.3-5.3h15.4l28.9-23.9c1.6-1.3,3.8-1.6,5.6-0.7c1.9,0.9,3,2.7,3,4.8L-451.9,722.3
+                                    L-451.9,722.3z M-431.5,714c-0.1,0-0.3,0-0.4,0c-1.4,0-2.7-0.6-3.7-1.5l-0.7-0.7c-1.9-1.9-2.1-4.8-0.5-6.9c4-5.3,6-11.7,6-18.3
+                                    c0-7.1-2.4-13.8-6.9-19.4c-1.7-2.1-1.6-5.2,0.4-7.1l0.7-0.7c1.1-1.1,2.5-1.6,4-1.5c1.5,0.1,2.9,0.8,3.8,1.9
+                                    c6.2,7.6,9.5,16.9,9.5,26.8c0,9.2-2.9,18-8.4,25.3C-428.6,713.1-430,713.9-431.5,714z M-409.7,730.3c-1,1.1-2.3,1.8-3.8,1.9
+                                    c-0.1,0-0.1,0-0.2,0c-1.4,0-2.7-0.6-3.7-1.5l-0.7-0.7c-1.9-1.9-2.1-5-0.3-7.1c8.5-10.1,13.2-23,13.2-36.3c0-13.8-5-27-14.2-37.3
+                                    c-1.9-2.1-1.8-5.3,0.2-7.2l0.7-0.7c1-1,2.4-1.6,3.9-1.6c1.5,0,2.8,0.7,3.8,1.8c11,12.4,17.1,28.4,17.1,45.1
+                                    C-393.7,702.6-399.4,718.1-409.7,730.3z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+                <div class="bulb">
+                  <a href="">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" id="Layer_1" class="bulb-wrapper" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="-703 -46.4 512 829.4" style="enable-background:new -703 -46.4 512 829.4;"
+                      xml:space="preserve">
+                      <style type="text/css">
+                        .st0 {
+                          fill: #FFC843;
+                        }
+
+                        .st1 {
+                          fill: #D49000;
+                        }
+
+                        .st2 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st3 {
+                          opacity: 0.1;
+                          enable-background: new;
+                        }
+
+                        .st4 {
+                          fill: #5C6670;
+                        }
+
+                        .st5 {
+                          fill: #333E48;
+                        }
+                      </style>
+                      <path id="SVGCleanerId_0" class="st0" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                  s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      <g>
+                        <path id="SVGCleanerId_0_1_" class="st0 the-bulb" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                    s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      </g>
+                      <g>
+                        <path class="st1" d="M-419.1,430.4c4.6,0,8.2,3.7,8.2,8.2c0,42.7,12.3,61.3,25.3,80.9c12.1,18.2,24.6,37.1,24.6,73.8
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-31.7-10.1-47-21.8-64.7c-13.2-19.8-28.1-42.3-28.1-90
+                                    C-427.4,434.1-423.7,430.4-419.1,430.4z" />
+                        <path class="st1" d="M-476.7,430.4c4.6,0,8.2,3.7,8.2,8.2c0,47.7-14.9,70.2-28.1,90c-11.7,17.7-21.8,32.9-21.8,64.7
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-36.7,12.5-55.5,24.6-73.8c13-19.6,25.3-38.2,25.3-80.9
+                                    C-484.9,434.1-481.2,430.4-476.7,430.4z" />
+                      </g>
+                      <path class="st2" d="M-474.8,555.3c2.5,0,4.9,1.1,6.4,3.1l20.5,25.4l20.5-25.4c1.6-1.9,3.9-3.1,6.4-3.1l0,0c2.5,0,4.9,1.1,6.4,3.1
+                                  l26.9,33.4c2.9,3.5,2.3,8.7-1.3,11.6c-3.5,2.9-8.7,2.3-11.6-1.3l-20.5-25.4l-20.5,25.4c-1.6,1.9-3.9,3.1-6.4,3.1s-4.9-1.1-6.4-3.1
+                                  l-20.5-25.4l-20.5,25.4c-2.9,3.5-8,4.1-11.6,1.3c-3.5-2.9-4.1-8-1.3-11.6l26.9-33.4C-479.6,556.4-477.3,555.3-474.8,555.3z" />
+                      <path class="st3" d="M-382.8,459.4c-3.4-6.7-5.4-13.4-5.4-20.7h-119.5c0,7.3-2,14-5.4,20.7H-382.8z" />
+                      <circle class="st4" cx="-447.9" cy="278.5" r="20.3" />
+                      <path class="st3" d="M-447.9,298.7c11.2,0,20.3-9.1,20.3-20.3c0-0.9-0.1-1.8-0.2-2.6c-6.3-2-13.1-3.1-20.1-3.1s-13.7,1.1-20.1,3.1
+                                  c-0.1,0.9-0.2,1.7-0.2,2.6C-468.2,289.7-459.1,298.7-447.9,298.7z" />
+                      <circle class="st5" cx="-447.9" cy="338.5" r="60" />
+                      <path class="st3" d="M-447.9,398.5c33.1,0,60-26.9,60-60c0-4.4-0.5-8.6-1.4-12.7h-117.3c-0.9,4.1-1.4,8.3-1.4,12.7
+                                  C-507.9,371.6-481,398.5-447.9,398.5z" />
+                      <path class="st4" d="M-533,358.8c0-11.2,9.1-20.3,20.3-20.3h129.6c11.2,0,20.3,9.1,20.3,20.3v63.1c0,11.2-9.1,20.3-20.3,20.3h-129.6
+                                  c-11.2,0-20.3-9.1-20.3-20.3V358.8z" />
+                      <g>
+                        <rect x="-533" y="401.5" class="st5" width="170.2" height="16.5" />
+                        <rect x="-533" y="362.6" class="st5" width="170.2" height="16.5" />
+                      </g>
+                      <rect x="-454.9" y="-182.8" class="st4" width="11" height="443" />
+                      <g>
+                        <path d="M-470.5,680.8c5.7,0,10.2-4.6,10.2-10.2c0-5.7-4.6-10.3-10.2-10.3s-10.2,4.6-10.2,10.2S-476.1,680.8-470.5,680.8z" />
+                        <path d="M-494.4,636.4V710v22.1h92V710v-73.6H-494.4z M-490.7,640h84.7v50.9l-20.8-19.1c-0.4-0.3-0.8-0.5-1.3-0.5
+                                    c-0.5,0-0.9,0.2-1.3,0.6l-15.4,16.9l7,7c0.7,0.7,0.7,1.9,0,2.6c-0.4,0.4-0.8,0.5-1.3,0.5c-0.5,0-0.9-0.2-1.3-0.5l-7-6.7l-8.7-8.7
+                                    c-0.7-0.7-1.8-0.7-2.5-0.1l-30.8,27.1h-1.1V640z M-406.1,728.4h-84.7v-14.7h84.7V728.4z" />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+                <div class="bulb">
+                  <a href="">
+                    <?xml version="1.0" encoding="utf-8"?>
+                    <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                    <svg version="1.1" class="bulb-wrapper" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                      x="0px" y="0px" viewBox="-703 -46.4 512 829.4" style="enable-background:new -703 -46.4 512 829.4;"
+                      xml:space="preserve">
+                      <style type="text/css">
+                        .st0 {
+                          fill: #FFC843;
+                        }
+
+                        .st1 {
+                          fill: #D49000;
+                        }
+
+                        .st2 {
+                          fill: #FFFFFF;
+                        }
+
+                        .st3 {
+                          opacity: 0.1;
+                          enable-background: new;
+                        }
+
+                        .st4 {
+                          fill: #5C6670;
+                        }
+
+                        .st5 {
+                          fill: #333E48;
+                        }
+                      </style>
+                      <path id="SVGCleanerId_0" class="st0" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                  s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      <g>
+                        <path id="SVGCleanerId_0_1_" class="st0 the-bulb" d="M-507.7,438.7c0,48.6-88.9,76.2-88.9,182.9c0,82.1,66.5,148.6,148.6,148.6
+                                    s148.6-66.5,148.6-148.6c0-106.7-88.9-134.3-88.9-182.9H-507.7z" />
+                      </g>
+                      <g>
+                        <path class="st1" d="M-419.1,430.4c4.6,0,8.2,3.7,8.2,8.2c0,42.7,12.3,61.3,25.3,80.9c12.1,18.2,24.6,37.1,24.6,73.8
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-31.7-10.1-47-21.8-64.7c-13.2-19.8-28.1-42.3-28.1-90
+                                    C-427.4,434.1-423.7,430.4-419.1,430.4z" />
+                        <path class="st1" d="M-476.7,430.4c4.6,0,8.2,3.7,8.2,8.2c0,47.7-14.9,70.2-28.1,90c-11.7,17.7-21.8,32.9-21.8,64.7
+                                    c0,4.6-3.7,8.2-8.2,8.2c-4.6,0-8.2-3.7-8.2-8.2c0-36.7,12.5-55.5,24.6-73.8c13-19.6,25.3-38.2,25.3-80.9
+                                    C-484.9,434.1-481.2,430.4-476.7,430.4z" />
+                      </g>
+                      <path class="st2" d="M-474.8,555.3c2.5,0,4.9,1.1,6.4,3.1l20.5,25.4l20.5-25.4c1.6-1.9,3.9-3.1,6.4-3.1l0,0c2.5,0,4.9,1.1,6.4,3.1
+                                  l26.9,33.4c2.9,3.5,2.3,8.7-1.3,11.6c-3.5,2.9-8.7,2.3-11.6-1.3l-20.5-25.4l-20.5,25.4c-1.6,1.9-3.9,3.1-6.4,3.1s-4.9-1.1-6.4-3.1
+                                  l-20.5-25.4l-20.5,25.4c-2.9,3.5-8,4.1-11.6,1.3c-3.5-2.9-4.1-8-1.3-11.6l26.9-33.4C-479.6,556.4-477.3,555.3-474.8,555.3z" />
+                      <path class="st3" d="M-382.8,459.4c-3.4-6.7-5.4-13.4-5.4-20.7h-119.5c0,7.3-2,14-5.4,20.7H-382.8z" />
+                      <circle class="st4" cx="-447.9" cy="278.5" r="20.3" />
+                      <path class="st3" d="M-447.9,298.7c11.2,0,20.3-9.1,20.3-20.3c0-0.9-0.1-1.8-0.2-2.6c-6.3-2-13.1-3.1-20.1-3.1s-13.7,1.1-20.1,3.1
+                                  c-0.1,0.9-0.2,1.7-0.2,2.6C-468.2,289.7-459.1,298.7-447.9,298.7z" />
+                      <circle class="st5" cx="-447.9" cy="338.5" r="60" />
+                      <path class="st3" d="M-447.9,398.5c33.1,0,60-26.9,60-60c0-4.4-0.5-8.6-1.4-12.7h-117.3c-0.9,4.1-1.4,8.3-1.4,12.7
+                                  C-507.9,371.6-481,398.5-447.9,398.5z" />
+                      <path class="st4" d="M-533,358.8c0-11.2,9.1-20.3,20.3-20.3h129.6c11.2,0,20.3,9.1,20.3,20.3v63.1c0,11.2-9.1,20.3-20.3,20.3h-129.6
+                                  c-11.2,0-20.3-9.1-20.3-20.3V358.8z" />
+                      <g>
+                        <rect x="-533" y="401.5" class="st5" width="170.2" height="16.5" />
+                        <rect x="-533" y="362.6" class="st5" width="170.2" height="16.5" />
+                      </g>
+                      <rect x="-454.9" y="-182.8" class="st4" width="11" height="443" />
+                      <path d="M-448.8,635.6c-26.9,0-48.7,21.9-48.7,48.8s21.9,48.8,48.7,48.8s48.8-21.9,48.8-48.8S-421.9,635.6-448.8,635.6z
+                                   M-423.5,685.7l-35.7,24.4c-0.3,0.2-0.6,0.3-0.9,0.3c-0.3,0-0.5-0.1-0.8-0.2c-0.5-0.3-0.9-0.8-0.9-1.4V660c0-0.6,0.3-1.2,0.9-1.4
+                                  c0.5-0.3,1.2-0.2,1.7,0.1l35.8,24.4c0.4,0.3,0.7,0.8,0.7,1.3C-422.8,684.9-423,685.4-423.5,685.7z" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+              <!-- Area para crear el post nuevo-->
+              <div class="new-post-content">
+                <form action=""></form>
+                <div class="input-area">
+                  <p class="lead emoji-picker-container">
+                    <textarea class="form-control textarea-control" rows="3" placeholder="Textarea with emoji image input"
+                      data-emojiable="true"></textarea>
+                  </p>
+                  <div class="media-to-load">
+                    <div class="element-to-load">
+                      <img src="assets/images/walls/m1.jpg" alt="">
+                    </div>
+                    <div class="element-addmore">
+                      <h2>+</h2>
+                    </div>
+                  </div>
+                </div>
+                <!-- Botones para agregar post y dar un regalo-->
+                <div class="add-post">
+                  <button>Publicar</button>
+                  <button class="gift" data-toggle="modal" data-target="#exampleModal"><i class="fas fa-gift"
+                      data-tippy="Agrega un regalo"></i>
+                    Agrega un regalo</button>
+                  <!-- Este es el modal de dar un regalo-->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Da un regalo</h5>
+                        </div>
+                        <div class="modal-body post-a-gift">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                          <img src="assets/images/walls/2.jpg" alt="gift-image">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </form>
+              </div>
+            </div>
+            <!-- Area de los post-->
+            <div class="posts">
+              <!-- The post es cada caja de post-->
+
+              <div class="the-post">
+                <div class="container">
+                  <div class="row">
+                    <div class="post-box">
+                      <div class="post-box-option">
+
+                        <div class="dropdown d-comment">
+                            <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                              aria-haspopup="true" aria-expanded="false">
+                              <i class="fas fa-ellipsis-h"></i>
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                              <a class="dropdown-item" href="#">Editar Post</a>
+                              <a class="dropdown-item" href="#">Borrar Post</a>
+                            </div>
+                      </div>
+                      </div>
+                      <div class="box-top">
+                        <div class="profile-picture">
+                          <img src="assets/images/other/ff.jpg" alt="">
+                        </div>
+                        <div class="profile-name">
+                          <h6>Jessica Parker <span class="name-companion">compartio una</span> <span class="post-type">publicacion</span></h6>
+                          <h6 class="time">7h</h6>
+                        </div>
+                      </div>
+                      <div class="box-content multi-single-image">
+                        <div class="the-comment-wrapper">
+                          <div class="comment">
+                            <p>Prueba Ronald</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box-bottom">
+                        <div class="like">
+                          <div class="like-box">
+                            <i class="far fa-thumbs-up"></i>
+                            <h6>Me gusta</h6>
+
+                          </div>
+                          <div class="reactions-post">
+                            <div class="the-reaction">
+                              <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                              <img src="assets/images/reacciones/triste1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccioaron asi">
+                              <img src="assets/images/reacciones/manitas1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="comment">
+                          <i class="fas fa-comment-dots"></i>
+                          <h6>Comentar</h6>
+                        </div>
+                        <div class="share">
+                          <i class="far fa-paper-plane"></i>
+                          <h6>Compatir</h6>
+                        </div>
+                      </div>
+                      <div class="comment-box">
+                        <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
+                        <input type="text" placeholder="Escribe tu comentario">
+                        <div class="attachment">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="the-post memory-box">
+                <div class="container">
+                  <div class="row">
+                    <div class="post-box">
+                        <div class="post-box-option">
+
+                            <div class="dropdown d-comment">
+                                <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                  aria-haspopup="true" aria-expanded="false">
+                                  <i class="fas fa-ellipsis-h"></i>
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Editar Post</a>
+                                  <a class="dropdown-item" href="#">Borrar Post</a>
+                                </div>
+                          </div>
+                          </div>
+                      <!--type-single-image es la clase de post que contiene una sola imagen-->
+                      <div class="box-content type-single-image">
+                        <img src="assets/images/walls/rose.jpg" alt="post-image" data-toggle="modal" data-target="#post-id-1">
+                      </div>
+                      <div class="modal fade open-photo" id="post-id-1" tabindex="-1" role="dialog" aria-labelledby="see-more"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                            <div class="modal-body multiple-images">
+                              <div class="current-photo">
+                                <div class="multi-image"><img src="assets/images/walls/victor-garcia-532261-unsplash.jpg"
+                                    alt="post-image"></div>
+                              </div>
+                              <div class="control-area">
+                                <div class="profile">
+                                  <div class="profile-image">
+                                    <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
+                                  </div>
+                                  <div class="profile-info">
+                                    <h6 class="name">Emma Watson</h6>
+                                    <h6 class="date">Hace 15 minutos</h6>
+                                  </div>
+                                </div>
+                                <div class="interaction-box">
+                                  <div class="like">
+                                    <i class="far fa-heart"></i>
+                                    <h6>Me gusta</h6>
+
+                                  </div>
+                                  <div class="comment">
+                                    <i class="fas fa-comment-dots"></i>
+                                    <h6>Comentar</h6>
+                                  </div>
+                                  <div class="share">
+                                    <i class="far fa-paper-plane"></i>
+                                    <h6>Compatir</h6>
+                                  </div>
+                                </div>
+                                <div class="add-comment">
+                                  <h6>Escribe un comentario</h6>
+                                  <input type="text" placeholder="...">
+                                </div>
+                                <div class="comment-box">
+                                  <div class="the-comment">
+                                    <div class="profile">
+                                      <div class="profile-image">
+                                        <img src="assets/images/walls/victor-garcia-532261-unsplash.jpg" alt="">
+                                      </div>
+                                      <div class="profile-info">
+                                        <p class="comment">Lorem ipsum dolor sit, amet consectetur adipisicing
+                                          elit. Ipsum temporibus corrupti nobis omnis repellat qui sapiente
+                                          perferendis ex voluptatem animi? Ullam quia quam quae vel amet fugiat
+                                          exercitationem repudiandae provident.</p>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="box-bottom">
+                        <!-- La clase like es la encargada de disparar el modal con las reacciones-->
+                        <!-- La clase liked muestra la manito de like en azul como si le dieron un like-->
+                        <div class="like liked">
+                          <div class="like-box">
+                            <i class="far fa-thumbs-up"></i>
+                            <h6>Me gusta</h6>
+                            <!-- Esta es la caja de las reacciones, cuando vayas a agregar una reaccion a una pagina solo debes copiar esta caja y en el javascript se encargara de clonarla en todos los items que lo tengna-->
+                            <div class="reaction-tools tippy-popper tippy-hide" x-placement="top">
+                              <div class="tippy-tooltips">
+                                <div class="tippy-content">
+                                  <div style="display: flex; flex-direction: row">
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                                      <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" height="20px">
+                                      <small>Me alegra</small>
+                                    </div>
+
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img
+                                        src="assets/images/reacciones/triste1.png" alt="" class="reaction" height="20px">
+                                      <small>Triste</small></div>
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img
+                                        src="assets/images/reacciones/manitas1.png" alt="" class="reaction" height="20px">
+                                      <small>Me encanta</small></div>
+                                    <div style="display: flex; flex-direction: column; margin:6px; justify-content: center; align-items: center; cursor: pointer;"
+                                      class="the-tippy" data-tippy="Sarah Parker y +10 mas reaccionaron asi"> <img
+                                        src="assets/images/reacciones/estrella.png" alt="" class="reaction" height="20px">
+                                      <small>Emotivo</small></div>
+
+
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="reactions-post d-none">
+                            <div class="the-reaction">
+                              <img src="assets/images/reacciones/feliz.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                              <img src="assets/images/reacciones/triste1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccioaron asi">
+                              <img src="assets/images/reacciones/manitas1.png" alt="" class="reaction" data-tippy="Sarah Parker y +10 mas reaccionaron asi">
+                            </div>
+                          </div>
+                        </div>
+                        <!-- boton de comentarios-->
+                        <div class="comment">
+                          <i class="fas fa-comment-dots"></i>
+                          <h6>Comentar</h6>
+                        </div>
+                        <!-- boton de compartir -->
+                        <div class="share">
+                          <i class="far fa-paper-plane"></i>
+                          <h6>Compatir</h6>
+                        </div>
+                      </div>
+                      <!-- Caja de comentarios-->
+                      <div class="comment-box">
+                        <img src="assets/images/other/man.jpg" alt="" class="profile-pic">
+                        <input type="text" placeholder="Escribe tu comentario">
+                        <div class="attachment">
+                        </div>
+                      </div>
+                      <!-- post-comments es cada comentario colocado en el post -->
+                      <div class="post-comments">
+                        <div class="profile-pic">
+                          <img src="assets/images/walls/m.jpg" alt="">
+                        </div>
+                        <div class="content-message-wrapper">
+                          <div class="user-comment-name">
+                            <p><strong>Laura Cohen</strong><span class="comment-time">Ayer a las 12:40h</span></p>
+
+
+                          </div>
+                          <div class="message">
+                            <p>
+                              Te extrano abuelo
+                            </p>
+                          </div>
+                              <div class="comment-options response">
+                                <div class="like liked">
+                                    <p><i class="far fa-thumbs-up"></i> Me gusta</p>
+                                </div>
+                                <p class="response-creator" id="342"><i class="fas fa-reply"></i> Responder</p>
+                              </div>
+                              <!-- RONALD ESTE DIV ES DONDE IRA EL INPUT NUEVO debe ir siempre debajo de los botones de responder y like del comentario-->
+                              <!--fijate que tiene una clase que dice response-343 bueno esta debes sustituirla por response-idDelPost -->
+                              <div class="response-comment the-response response-342"  ></div>
+                              <!-- RONALD ESTE DIV ES DONDE IRA EL INPUT NUEVO debe ir siempre debajo de los botones de responder y like del comentario-->
+                        </div>
+                            <div class="dropdown d-comment">
+                              <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Editar comentario</a>
+                                <a class="dropdown-item" href="#">Borrar comentario</a>
+                              </div>
+                        </div>
+                      </div>
+                      <!-- la clase reply se anade a los comentarios para que se muestren como una respuesta a otro comentario -->
+                      <div class="post-comments reply">
+                        <div class="reply-comment">
+                          <div class="profile-pic">
+                            <img src="assets/images/other/kal-loftus-596317-unsplash.jpg" alt="">
+                          </div>
+                          <div class="content-message-wrapper">
+                              <div class="user-comment-name">
+                                <p><strong>Laura Cohen</strong><span class="comment-time">Ayer a las 12:40h</span></p>
+                                <div class="message">
+                                  <p>
+                                    Todos lo extranamos, bonita postal :) seguro le habria encantado
+                                  </p>
+                                </div>
+                                <div class="comment-options response">
+                                    <div class="like liked">
+                                        <p><i class="far fa-thumbs-up"></i> Me gusta</p>
+                                    </div>
+                                    <!-- a este P le agregue la clase response creator, este en el id debe llevar el id del post para identificar donde se abrira la caja del input-->
+                                    <p class="response-creator" id="343"><i class="fas fa-reply"></i> Responder</p>
+                                  </div>
+                                  <!-- RONALD ESTE DIV ES DONDE IRA EL INPUT NUEVO debe ir siempre debajo de los botones de responder y like del comentario-->
+                                  <!--fijate que tiene una clase que dice response-343 bueno esta debes sustituirla por response-idDelPost -->
+                                  <div class="response-comment the-response response-343"  ></div>
+                                  <!-- RONALD ESTE DIV ES DONDE IRA EL INPUT NUEVO debe ir siempre debajo de los botones de responder y like del comentario-->
+
+                              </div>
+                          </div>
+                          <div class="dropdown d-comment">
+                              <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-h"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="#">Editar comentario</a>
+                                <a class="dropdown-item" href="#">Borrar comentario</a>
+                              </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- Columna de chat -->
+        <div class="col-sm-12 col-md-3 col-lg-2 col-xl-2 column-chat">
+
+          <div class="chat">
+            <h5>CONTACTOS</h5>
+            <small class="home-chat-off">Desconectarme</small>
+            <div class="chat-wrapper">
+              <div class="contact-wrapper">
+                <!-- contact es cada contacto activo-->
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+                <div class="contact" data-contact="contact-1">
+                  <img src="assets/images/other/rrrr.jpg" alt="contact-image">
+                </div>
+
+                <!-- Famemory Logo -->
+                <!-- Estos son los circulos con las letras del logo de famemory-->
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/f.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/a.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/m1.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/e.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/m.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/o.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/r.png" alt="contact-image">
+                </div>
+                <div class="contact-logos d-none" data-contact="contact-1">
+                  <img src="assets/images/logo/y.png" alt="contact-image">
+                </div>
+              </div>
+            </div>
+            <div class="chat-bottom">
+              <form class="form-inline position-relative ml-auto">
+                <input type="text" class="form-control searchbox" placeholder="Buscar..." aria-label="Username"
+                  aria-describedby="basic-addon1">
+                <div class="chat-icons">
+                  <i class="fas fa-user-plus"></i>
+                  <i class="fas fa-pencil-alt"></i>
+                  <i class="fas fa-cog"></i>
+                </div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <div class="more-chats-windows">
+        <div class="dropdown more-chat-drop">
+            <button class="comment-options" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-comments"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">Chat 4</a>
+              <a class="dropdown-item" href="#">Chat 5</a>
+            </div>
+      </div>
+    </div>
+  </div>
+  <!--Componentes del home-->
+  <!-- Tooltip Tool -->
+
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+  <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js'></script>
+  <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
+  <script src='js/functions.js'></script>
+  <!-- End Tooltip Tool -->
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+.small__chat.chat__message__img{
+    width: 100%;
+    margin: 10px 0;
+    border: solid 2px #e2e2e2;
+}
+.small__chat.chat__message__img img{
+    width: 100%;
+}
+.chat__message__img{
+    width: 100%;
+    margin: 10px 0;
+    border: solid 2px #e2e2e2;
+}
+.chat__message__img img{
+    width: 100%;
+}
+.chat__image__wrapper.multi{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+}
+.chat__image__wrapper.multi .chat__message__img {
+    width: calc(100% / 3);
+}
